@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마크다운 이미지 첨부 테스트 - Portfolio</title>
+    
+    <meta name="description" content="Hugo에서 기본 마크다운 문법으로 어떻게 이미지가 렌더링되는지 확인합니다.">
+    <meta name="theme-color" content="#111214">
+    <link rel="canonical" href="http://localhost:1313/posts/image-test/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="마크다운 이미지 첨부 테스트 - Portfolio">
+    <meta property="og:description" content="Hugo에서 기본 마크다운 문법으로 어떻게 이미지가 렌더링되는지 확인합니다.">
+    <meta property="og:url" content="http://localhost:1313/posts/image-test/">
+    <meta property="og:site_name" content="Portfolio">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="마크다운 이미지 첨부 테스트 - Portfolio">
+    <meta name="twitter:description" content="Hugo에서 기본 마크다운 문법으로 어떻게 이미지가 렌더링되는지 확인합니다.">
+
+    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    
+</head>
+
+<body>
+
+
+<main>
+  <aside class="sidebar" data-sidebar>
+  <div class="sidebar-info">
+    <figure class="avatar-box">
+      
+      <img src="/assets/images/my-avatar.png" alt="Young" width="80">
+      
+    </figure>
+
+    <div class="info-content">
+      <h1 class="name" title="Young">
+        <a href="/" style="color: inherit;">Young</a>
+      </h1>
+      <p class="title">Web Developer</p>
+    </div>
+
+    <button class="info_more-btn" data-sidebar-btn>
+      <span>Show Contacts</span>
+      <ion-icon name="chevron-down"></ion-icon>
+    </button>
+  </div>
+
+  <div class="sidebar-info_more">
+    <div class="separator"></div>
+
+    <ul class="contacts-list">
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="mail-outline"></ion-icon>
+        </div>
+        <div class="contact-info">
+          <p class="contact-title">Email</p>
+          <a href="mailto:taeyoung6873@gmail.com" class="contact-link">taeyoung6873@gmail.com</a>
+        </div>
+      </li>
+
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="phone-portrait-outline"></ion-icon>
+        </div>
+        <div class="contact-info">
+          <p class="contact-title">Phone</p>
+          <a href="tel:&#43;82%20%2810%29%201234-5678" class="contact-link">&#43;82 (10) 1234-5678</a>
+        </div>
+      </li>
+
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </div>
+        <div class="contact-info">
+          <p class="contact-title">Birthday</p>
+          <time datetime="199X. 01. 01">199X. 01. 01</time>
+        </div>
+      </li>
+
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="location-outline"></ion-icon>
+        </div>
+        <div class="contact-info">
+          <p class="contact-title">Location</p>
+          <address>Seoul, South Korea</address>
+        </div>
+      </li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <ul class="social-list">
+      <li class="social-item">
+        <a href="https://github.com/youngyoung-0" class="social-link" title="GitHub">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+
+  <div class="main-content">
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="/" class="navbar-link">Home</a>
+        </li>
+        <li class="navbar-item">
+          <a href="/posts/" class="navbar-link active">Blog</a>
+        </li>
+      </ul>
+    </nav>
+
+    <article class="blog active" data-page="blog">
+      <div class="post-shell">
+        <header class="post-header">
+          <h1 class="post-title">마크다운 이미지 첨부 테스트</h1>
+
+          <div class="post-meta">
+            <time datetime="2026-03-04">March 04, 2026</time>
+
+            
+            <span class="dot"></span>
+            <span>튜토리얼</span>
+            
+
+            
+            <span class="dot"></span>
+            <span>
+              
+              마크다운
+              
+              , 테스트
+              
+            </span>
+            
+          </div>
+        </header>
+
+        <section class="post-content simple-typography">
+          <p>안녕하세요! 블로그에 글을 작성하면서 이미지를 첨부하는 것은 가독성을 높이는데 필수적입니다.
+Hugo에서는 <code>static</code> 폴더를 루트 디렉터리로 취급합니다.</p>
+<h2 id="이미지-렌더링-예시">이미지 렌더링 예시</h2>
+<p>아래와 같이 <code>static/assets/images</code> 경로 이미지를 손쉽게 마크다운 문법으로 불러올 수 있습니다.</p>
+<p><img src="/assets/images/blog-1.jpg" alt="샘플 이미지 테스트"></p>
+<p><strong>코드 예시:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">샘플 이미지 이름</span>](<span style="color:#a6e22e">/assets/images/blog-1.jpg</span>)
+</span></span></code></pre></div><p>이와 같이 작성하면 로컬 서버와 실제 배포 환경 모두에서 이미지가 자연스럽게 렌더링됩니다.</p>
+
+        </section>
+      </div>
+    </article>
+  </div>
+</main>
+
+<script src="/assets/js/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

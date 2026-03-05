@@ -1,0 +1,79 @@
+<aside class="sidebar" data-sidebar>
+  <div class="sidebar-info">
+    <figure class="avatar-box">
+      {{ if site.Params.profileMode.imageUrl }}
+      <img src="{{ site.Params.profileMode.imageUrl }}" alt="{{ site.Params.author }}" width="80">
+      {{ else }}
+      <img src="/assets/images/my-avatar.png" alt="{{ site.Params.author }}" width="80">
+      {{ end }}
+    </figure>
+
+    <div class="info-content">
+      <h1 class="name" title="{{ site.Params.author }}">
+        <a href="/" style="color: inherit;">{{ site.Params.author }}</a>
+      </h1>
+      <p class="title">Web Developer</p>
+    </div>
+
+    <button class="info_more-btn" data-sidebar-btn>
+      <span>Show Contacts</span>
+      <ion-icon name="chevron-down"></ion-icon>
+    </button>
+  </div>
+
+  <div class="sidebar-info_more">
+    <div class="separator"></div>
+
+    <ul class="contacts-list">
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="mail-outline"></ion-icon>
+        </div>
+        <div class="contact-info">
+          <p class="contact-title">Email</p>
+          <a href="mailto:{{ site.Params.profileMode.email }}" class="contact-link">{{ site.Params.profileMode.email }}</a>
+        </div>
+      </li>
+
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="phone-portrait-outline"></ion-icon>
+        </div>
+        <div class="contact-info">
+          <p class="contact-title">Phone</p>
+          <a href="tel:{{ site.Params.profileMode.phone }}" class="contact-link">{{ site.Params.profileMode.phone }}</a>
+        </div>
+      </li>
+
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </div>
+        <div class="contact-info">
+          <p class="contact-title">Birthday</p>
+          <time datetime="{{ site.Params.profileMode.birthday }}">{{ site.Params.profileMode.birthday }}</time>
+        </div>
+      </li>
+
+      <li class="contact-item">
+        <div class="icon-box">
+          <ion-icon name="location-outline"></ion-icon>
+        </div>
+        <div class="contact-info">
+          <p class="contact-title">Location</p>
+          <address>{{ site.Params.profileMode.location }}</address>
+        </div>
+      </li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <ul class="social-list">
+      <li class="social-item">
+        <a href="https://{{ site.Params.profileMode.github }}" class="social-link" title="GitHub">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>

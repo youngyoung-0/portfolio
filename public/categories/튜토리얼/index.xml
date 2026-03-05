@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>튜토리얼 on Portfolio</title>
+    <link>http://localhost:1313/categories/%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC/</link>
+    <description>Recent content in 튜토리얼 on Portfolio</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 04 Mar 2026 12:05:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>마크다운 이미지 첨부 테스트</title>
+      <link>http://localhost:1313/posts/image-test/</link>
+      <pubDate>Wed, 04 Mar 2026 12:05:00 +0900</pubDate>
+      <guid>http://localhost:1313/posts/image-test/</guid>
+      <description>&lt;p&gt;안녕하세요! 블로그에 글을 작성하면서 이미지를 첨부하는 것은 가독성을 높이는데 필수적입니다.&#xA;Hugo에서는 &lt;code&gt;static&lt;/code&gt; 폴더를 루트 디렉터리로 취급합니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;이미지-렌더링-예시&#34;&gt;이미지 렌더링 예시&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같이 &lt;code&gt;static/assets/images&lt;/code&gt; 경로 이미지를 손쉽게 마크다운 문법으로 불러올 수 있습니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/assets/images/blog-1.jpg&#34; alt=&#34;샘플 이미지 테스트&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;코드 예시:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;![&lt;span style=&#34;color:#f92672&#34;&gt;샘플 이미지 이름&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;/assets/images/blog-1.jpg&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이와 같이 작성하면 로컬 서버와 실제 배포 환경 모두에서 이미지가 자연스럽게 렌더링됩니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

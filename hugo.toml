@@ -1,0 +1,49 @@
+baseURL = 'https://young-portfolio.example.com/'
+languageCode = 'ko-kr'
+title = 'Portfolio'
+
+[params]
+  env = 'production'
+  title = 'Portfolio'
+  description = '개발 여정과 트러블슈팅을 기록하는 공간입니다.'
+  author = 'Young'
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+
+[params.profileMode]
+  enabled = true
+  title = "안녕하세요!👋 배움을 기록하는 개발자 Young입니다."
+  subtitle = "이 공간은 제가 공부하며 배운 점과 고민들, 그리고 개발 중 겪었던 트러블슈팅 경험을 기록하기 위해 만들었습니다.<br>매일 성장하며 효율적인 아키텍처와 UX를 고민합니다."
+  email = "taeyoung6873@gmail.com"
+  phone = "+82 (10) 1234-5678"
+  birthday = "199X. 01. 01"
+  location = "Seoul, South Korea"
+  github = "github.com/youngyoung-0"
+  imageUrl = ""
+  imageWidth = 120
+  imageHeight = 120
+  imageTitle = "my image"
+  buttons = [
+    { name = "Blog Posts", url = "/posts/" }
+  ]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 40

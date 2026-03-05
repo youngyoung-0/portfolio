@@ -1,0 +1,34 @@
+{{ partial "header.html" . }}
+
+<main>
+  {{ partial "sidebar.html" . }}
+
+  <div class="main-content">
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item"><a href="/" class="navbar-link">Home</a></li>
+        <li class="navbar-item"><a href="/posts/" class="navbar-link active">Blog</a></li>
+      </ul>
+    </nav>
+
+    <article class="blog active" data-page="blog">
+      <header>
+        <h1 class="h2 article-title">{{ .Title }}</h1>
+      </header>
+      <section class="blog-posts">
+        <ul class="blog-posts-list">
+          {{ range .Data.Terms.ByCount }}
+          <li class="blog-post-item blog-card">
+            <a href="{{ .Page.RelPermalink }}">
+              <h3 class="h3 blog-item-title">{{ .Page.Title }}</h3>
+              <p class="blog-text">{{ .Count }} posts</p>
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+    </article>
+  </div>
+</main>
+
+{{ partial "footer.html" . }}
