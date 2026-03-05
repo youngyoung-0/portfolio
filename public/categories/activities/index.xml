@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Activities on Portfolio</title>
-    <link>http://localhost:1313/categories/activities/</link>
+    <link>http://localhost:1313/portfolio/categories/activities/</link>
     <description>Recent content in Activities on Portfolio</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 05 Mar 2026 15:10:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/activities/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/portfolio/categories/activities/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>기술 블로그 포트폴리오 구축</title>
-      <link>http://localhost:1313/posts/activity-portfolio-build/</link>
+      <link>http://localhost:1313/portfolio/posts/activity-portfolio-build/</link>
       <pubDate>Thu, 05 Mar 2026 15:10:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/activity-portfolio-build/</guid>
+      <guid>http://localhost:1313/portfolio/posts/activity-portfolio-build/</guid>
       <description>&lt;p&gt;기술 블로그형 포트폴리오를 Hugo 기반으로 재구성했습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;진행-내용&#34;&gt;진행 내용&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;기존 데모 섹션을 제거하고 About + Blog 중심으로 정보 구조를 단순화했습니다.&lt;/li&gt;&#xA;&lt;li&gt;프로필 정보는 &lt;code&gt;hugo.toml&lt;/code&gt;에서 일괄 관리하도록 정리했습니다.&lt;/li&gt;&#xA;&lt;li&gt;활동 이력은 &lt;code&gt;categories: [&amp;quot;Activities&amp;quot;]&lt;/code&gt; 규칙으로 About 타임라인에서 자동 노출되게 했습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;결과&#34;&gt;결과&lt;/h2&gt;&#xA;&lt;p&gt;콘텐츠 작성 흐름이 단순해졌고, 활동 이력과 일반 개발 글을 같은 작성 방식으로 관리할 수 있게 됐습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>기술 블로그 포트폴리오 구축</title>
+      <link>http://localhost:1313/portfolio/posts/umi-game/</link>
+      <pubDate>Thu, 05 Mar 2026 15:10:00 +0900</pubDate>
+      <guid>http://localhost:1313/portfolio/posts/umi-game/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
