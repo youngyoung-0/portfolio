@@ -86,15 +86,20 @@
   - 디바이스 해상도별(모바일 햄버거 메뉴, 태블릿, PC) 레이아웃 스크롤 및 겹침 현상 테스트
   - 전체 시스템 색상 일관성(보더, 배경, 텍스트) 점검
 
-### Step 6: 배포 (Deploy)
-- GitHub Pages(기본 제공) 또는 Vercel/Netlify에 Repository 연동
-- 사이트맵 생성 및 기본 SEO 태그 정상 반영 확인
-- 최종 배포본 확인 및 마무리
+### Step 6: 배포 (Deploy) - **Vercel 플랫폼 선정 완료**
+- [x] **배포 전 설정 변경**: `hugo.toml`의 `baseURL`을 배포용 URL(Vercel 도메인 또는 커스텀 도메인)로 업데이트
+- [x] **자동 배포 파이프라인 구축 (Vercel)**:
+  - GitHub Repository를 Vercel에 연동 (Import Project)
+  - Framework Preset이 `Hugo`로 자동 인식되는지 확인 (Build Command: `hugo --gc --minify`, Output Dir: `public`)
+- [ ] (선택) **커스텀 도메인 연결**:
+  - 도메인 구매 (가비아, 호스팅케이알, Cloudflare 등)
+  - Vercel Project Settings > Domains 에 구매한 도메인 추가
+  - 도메인 구매처 네임서버에 Vercel용 DNS 레코드(A Record / CNAME) 등록
+- [ ] **배포 후 동작 검증**:
+  - Vercel 기본 도메인(`.vercel.app`) 및 커스텀 도메인 이중 접속 확인
+  - 데스크톱/모바일 UI 정상 렌더링 확인
+  - 404 에러 리소스(이미지 등) 파악
+  - `sitemap.xml` 및 SEO OG태그 정상 노출 체크
 
 ## 5. 피드백 요청 (Next Steps)
-위 기획안을 읽어보시고 다음 사항에 대한 의견을 알려주세요.
-1. **프레임워크 선택**: 속도가 매우 빠른 **Hugo**와 GitHub Pages 연동이 가장 자연스러운 **Jekyll** 중 어느 것을 선호하시나요?
-2. **디자인 무드**: 특별히 선호하는 디자인 스타일이나 포인트 컬러가 있으신가요?
-3. **추가 기능**: 댓글 기능이나 더 필요한 요소가 있을까요?
-
-피드백이 확정되면, **Step 1(프로젝트 초기화)** 부터 본격적으로 개발을 시작하겠습니다!
+위의 Vercel 기준 배포 계획을 확인하시고, 실제 Vercel 연동을 진행할까요? Vercel 계정이 없으시다면 회원가입 후 GitHub 연동을 진행해 주시면 됩니다.
