@@ -154,3 +154,9 @@ Change detected, rebuilding site (#25).
 Source changed /posts/umi-game.md
 Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
 Total in 7 ms
+
+Change detected, rebuilding site (#26).
+2026-03-08 20:27:33.757 +0900
+Source changed /posts/umi-game.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 39 ms
