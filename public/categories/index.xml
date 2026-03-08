@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Portfolio</title>
-    <link>http://localhost:49898/portfolio/categories/</link>
+    <link>http://localhost:1313/portfolio/categories/</link>
     <description>Recent content in Categories on Portfolio</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 05 Mar 2026 15:10:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:49898/portfolio/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/portfolio/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Activities</title>
-      <link>http://localhost:49898/portfolio/categories/activities/</link>
+      <link>http://localhost:1313/portfolio/categories/activities/</link>
       <pubDate>Thu, 05 Mar 2026 15:10:00 +0900</pubDate>
-      <guid>http://localhost:49898/portfolio/categories/activities/</guid>
+      <guid>http://localhost:1313/portfolio/categories/activities/</guid>
       <description></description>
     </item>
     <item>
       <title>튜토리얼</title>
-      <link>http://localhost:49898/portfolio/categories/%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC/</link>
+      <link>http://localhost:1313/portfolio/categories/%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC/</link>
       <pubDate>Wed, 04 Mar 2026 12:05:00 +0900</pubDate>
-      <guid>http://localhost:49898/portfolio/categories/%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC/</guid>
+      <guid>http://localhost:1313/portfolio/categories/%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC/</guid>
       <description></description>
     </item>
     <item>
       <title>개발 일지</title>
-      <link>http://localhost:49898/portfolio/categories/%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80/</link>
+      <link>http://localhost:1313/portfolio/categories/%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80/</link>
       <pubDate>Wed, 04 Mar 2026 12:00:00 +0900</pubDate>
-      <guid>http://localhost:49898/portfolio/categories/%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80/</guid>
+      <guid>http://localhost:1313/portfolio/categories/%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Activities on Portfolio</title>
-    <link>http://localhost:49898/portfolio/categories/activities/</link>
+    <link>http://localhost:1313/portfolio/categories/activities/</link>
     <description>Recent content in Activities on Portfolio</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 05 Mar 2026 15:10:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:49898/portfolio/categories/activities/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/portfolio/categories/activities/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>기술 블로그 포트폴리오 구축</title>
-      <link>http://localhost:49898/portfolio/posts/activity-portfolio-build/</link>
+      <link>http://localhost:1313/portfolio/posts/activity-portfolio-build/</link>
       <pubDate>Thu, 05 Mar 2026 15:10:00 +0900</pubDate>
-      <guid>http://localhost:49898/portfolio/posts/activity-portfolio-build/</guid>
+      <guid>http://localhost:1313/portfolio/posts/activity-portfolio-build/</guid>
       <description>&lt;p&gt;기술 블로그형 포트폴리오를 Hugo 기반으로 재구성했습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;진행-내용&#34;&gt;진행 내용&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;기존 데모 섹션을 제거하고 About + Blog 중심으로 정보 구조를 단순화했습니다.&lt;/li&gt;&#xA;&lt;li&gt;프로필 정보는 &lt;code&gt;hugo.toml&lt;/code&gt;에서 일괄 관리하도록 정리했습니다.&lt;/li&gt;&#xA;&lt;li&gt;활동 이력은 &lt;code&gt;categories: [&amp;quot;Activities&amp;quot;]&lt;/code&gt; 규칙으로 About 타임라인에서 자동 노출되게 했습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;결과&#34;&gt;결과&lt;/h2&gt;&#xA;&lt;p&gt;콘텐츠 작성 흐름이 단순해졌고, 활동 이력과 일반 개발 글을 같은 작성 방식으로 관리할 수 있게 됐습니다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>우미 게임</title>
-      <link>http://localhost:49898/portfolio/posts/umi-game/</link>
+      <title>UMI — LLM 기반 인터랙티브 게임 백엔드</title>
+      <link>http://localhost:1313/portfolio/posts/umi-game/</link>
       <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49898/portfolio/posts/umi-game/</guid>
-      <description>&lt;p&gt;페르소나는 많은 기업에서 구매의사 예측, 세그먼트, 추천 시스템 등 분석 보조 도구에 사용하고 있지만, LLM 하나의 인격을 부여했을때, 유저가 던지는 예측불가능하고 복잡한 상황 속에서도 그 페르소나를 안정적으로 유지할 수 있을까? 라는 의문으로 이 프로젝트를 시작하게 되었습니다.&lt;/p&gt;&#xA;&lt;p&gt;이 실험하기에는 게임라는 무대가 적합하고 생각했습니다.&#xA;게임이라는 무대는 예측 불가능한 돌발대화를 유도할 수 있고, 실시간 대화로 인해서 NPC의 감정 반영을 확인할 수 있습니다.&lt;/p&gt;&#xA;&lt;p&gt;그리고 NPC의 설정된 페르소나 증명되는지 확인 가능하다고 생각했습니다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&#xA;  &#xA;&#xA;&lt;img src=&#34;http://localhost:49898/portfolio/assets/images/umi-game-page/1F_outside01.png&#34; alt=&#34;게임 이미지&#34;  /&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;사이비 종교 특성상 외부와 단절된 환경에서 대화와 심리에 리소스 집중할 수 있고, 논리가 통하지 않는 비이성적인 가치관을 가지고 있고 생존과 탈출이라는 목표를 심어줄 수 있다고 생각했습니다.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/portfolio/posts/umi-game/</guid>
+      <description>&lt;h2 id=&#34;프로젝트를-시작한-이유&#34;&gt;프로젝트를 시작한 이유&lt;/h2&gt;&#xA;&lt;p&gt;페르소나는 많은 기업에서 구매 의사 예측, 세그먼테이션, 추천 시스템 등 분석 보조 도구로 활용되고 있습니다. 하지만 저희는 한 가지 의문이 들었습니다.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;LLM에 하나의 인격을 부여했을 때, 유저가 던지는 예측 불가능하고 복잡한 상황 속에서도 그 페르소나를 안정적으로 유지할 수 있을까?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;이를 실험하기 위한 무대로 &lt;strong&gt;게임&lt;/strong&gt;이 적합하다고 판단했습니다. 게임 환경은 돌발적인 대화를 자연스럽게 유도하고, 실시간 NPC 반응을 통해 페르소나의 일관성을 눈으로 직접 확인할 수 있기 때문입니다.&lt;/p&gt;&#xA;&lt;p&gt;세계관으로는 &lt;strong&gt;사이비 종교&lt;/strong&gt;를 선택했습니다. 외부와 단절된 폐쇄 환경에서 대화·심리에 집중할 수 있고, 비이성적인 가치관과 &amp;lsquo;생존과 탈출&amp;rsquo;이라는 명확한 목표가 유저의 몰입감을 극대화할 수 있다고 생각했습니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

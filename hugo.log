@@ -160,3 +160,24 @@ Change detected, rebuilding site (#26).
 Source changed /posts/umi-game.md
 Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
 Total in 39 ms
+
+Change detected, rebuilding site (#27).
+2026-03-08 20:29:58.249 +0900
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Rebuilt in 95 ms
+
+Change of config file detected, rebuilding site (#28).
+2026-03-08 20:31:48.747 +0900
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Rebuilt in 58 ms
+
+Change of config file detected, rebuilding site (#29).
+2026-03-08 20:31:51.746 +0900
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Rebuilt in 37 ms
+
+Change detected, rebuilding site (#30).
+2026-03-08 20:32:53.751 +0900
+Template changed /partials/sidebar.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 13 ms

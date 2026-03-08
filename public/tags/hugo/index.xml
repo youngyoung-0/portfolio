@@ -2,31 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Portfolio</title>
-    <link>http://localhost:49898/portfolio/tags/hugo/</link>
+    <link>http://localhost:1313/portfolio/tags/hugo/</link>
     <description>Recent content in Hugo on Portfolio</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 05 Mar 2026 15:10:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:49898/portfolio/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/portfolio/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>기술 블로그 포트폴리오 구축</title>
-      <link>http://localhost:49898/portfolio/posts/activity-portfolio-build/</link>
+      <link>http://localhost:1313/portfolio/posts/activity-portfolio-build/</link>
       <pubDate>Thu, 05 Mar 2026 15:10:00 +0900</pubDate>
-      <guid>http://localhost:49898/portfolio/posts/activity-portfolio-build/</guid>
+      <guid>http://localhost:1313/portfolio/posts/activity-portfolio-build/</guid>
       <description>&lt;p&gt;기술 블로그형 포트폴리오를 Hugo 기반으로 재구성했습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;진행-내용&#34;&gt;진행 내용&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;기존 데모 섹션을 제거하고 About + Blog 중심으로 정보 구조를 단순화했습니다.&lt;/li&gt;&#xA;&lt;li&gt;프로필 정보는 &lt;code&gt;hugo.toml&lt;/code&gt;에서 일괄 관리하도록 정리했습니다.&lt;/li&gt;&#xA;&lt;li&gt;활동 이력은 &lt;code&gt;categories: [&amp;quot;Activities&amp;quot;]&lt;/code&gt; 규칙으로 About 타임라인에서 자동 노출되게 했습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;결과&#34;&gt;결과&lt;/h2&gt;&#xA;&lt;p&gt;콘텐츠 작성 흐름이 단순해졌고, 활동 이력과 일반 개발 글을 같은 작성 방식으로 관리할 수 있게 됐습니다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>우미 게임</title>
-      <link>http://localhost:49898/portfolio/posts/umi-game/</link>
-      <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:49898/portfolio/posts/umi-game/</guid>
-      <description>&lt;p&gt;페르소나는 많은 기업에서 구매의사 예측, 세그먼트, 추천 시스템 등 분석 보조 도구에 사용하고 있지만, LLM 하나의 인격을 부여했을때, 유저가 던지는 예측불가능하고 복잡한 상황 속에서도 그 페르소나를 안정적으로 유지할 수 있을까? 라는 의문으로 이 프로젝트를 시작하게 되었습니다.&lt;/p&gt;&#xA;&lt;p&gt;이 실험하기에는 게임라는 무대가 적합하고 생각했습니다.&#xA;게임이라는 무대는 예측 불가능한 돌발대화를 유도할 수 있고, 실시간 대화로 인해서 NPC의 감정 반영을 확인할 수 있습니다.&lt;/p&gt;&#xA;&lt;p&gt;그리고 NPC의 설정된 페르소나 증명되는지 확인 가능하다고 생각했습니다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&#xA;  &#xA;&#xA;&lt;img src=&#34;http://localhost:49898/portfolio/assets/images/umi-game-page/1F_outside01.png&#34; alt=&#34;게임 이미지&#34;  /&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;사이비 종교 특성상 외부와 단절된 환경에서 대화와 심리에 리소스 집중할 수 있고, 논리가 통하지 않는 비이성적인 가치관을 가지고 있고 생존과 탈출이라는 목표를 심어줄 수 있다고 생각했습니다.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>나의 첫 번째 트러블슈팅 기록</title>
-      <link>http://localhost:49898/portfolio/posts/first-troubleshooting/</link>
+      <link>http://localhost:1313/portfolio/posts/first-troubleshooting/</link>
       <pubDate>Wed, 04 Mar 2026 12:00:00 +0900</pubDate>
-      <guid>http://localhost:49898/portfolio/posts/first-troubleshooting/</guid>
+      <guid>http://localhost:1313/portfolio/posts/first-troubleshooting/</guid>
       <description>&lt;h2 id=&#34;1-문제-발생&#34;&gt;1. 문제 발생&lt;/h2&gt;&#xA;&lt;p&gt;프로젝트를 설정하던 중 예기치 않은 에러가 발생했습니다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: command not found: hugo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-원인-분석&#34;&gt;2. 원인 분석&lt;/h2&gt;&#xA;&lt;p&gt;정적 사이트 생성기인 Hugo가 개발 환경에 설치되어 있지 않았기 때문입니다. 홈브루(Homebrew)를 통해 간단히 설치할 수 있었습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;3-해결-방법&#34;&gt;3. 해결 방법&lt;/h2&gt;&#xA;&lt;p&gt;다음 명령어를 통해 Hugo를 전역으로 설치했습니다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이후 &lt;code&gt;hugo version&lt;/code&gt; 명령어로 정상 설치 여부를 확인한 뒤, 무사히 프로젝트 생성을 마칠 수 있었습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;4-배운-점&#34;&gt;4. 배운 점&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;개발 환경을 세팅할 때는 필요한 CLI 도구가 로컬에 잘 설치되어 있는지 먼저 확인하는 습관을 들여야겠습니다.&lt;/li&gt;&#xA;&lt;li&gt;환경 구성 시 발생하는 에러 메시지를 당황하지 않고 꼼꼼히 읽으면 원인을 쉽게 파악할 수 있음을 배웠습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
