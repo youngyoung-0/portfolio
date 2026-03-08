@@ -2008,3 +2008,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   -webkit-text-fill-color: var(--white-2, #fafafa) !important;
   text-decoration: none !important;
 }
+
+.post-content strong, .post-content b {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}

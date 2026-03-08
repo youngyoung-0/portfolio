@@ -195,3 +195,37 @@ Total in 9 ms
 Change of Static files detected, rebuilding site (#33).
 2026-03-08 20:39:52.782 +0900
 Syncing /assets/css/style.css to /
+
+Change detected, rebuilding site (#34).
+2026-03-08 20:52:17.797 +0900
+Source changed /posts/umi-game.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 38 ms
+
+Change detected, rebuilding site (#35).
+2026-03-08 21:07:11.327 +0900
+Source changed /posts/umi-game.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 70 ms
+
+Change detected, rebuilding site (#36).
+2026-03-08 21:09:03.311 +0900
+Source changed /posts/umi-game.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 10 ms
+
+Change of Static files detected, rebuilding site (#37).
+2026-03-08 21:11:26.191 +0900
+Syncing /assets/css/style.css to /
+
+Change detected, rebuilding site (#38).
+2026-03-08 21:12:20.689 +0900
+Source changed /posts/umi-game.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 19 ms
+
+Change detected, rebuilding site (#39).
+2026-03-08 21:15:18.684 +0900
+Source changed /posts/umi-game.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 11 ms

@@ -163,7 +163,13 @@
         </header>
 
         <section class="post-content simple-typography">
-          <h2 id="프로젝트를-시작한-이유">프로젝트를 시작한 이유</h2>
+          <h2 id="프로젝트-개요">프로젝트 개요</h2>
+<ul>
+<li><strong>진행 기간:</strong> 2026. 01. 22 ~ 2026. 02. 27 (약 5주)</li>
+<li><strong>주요 목적:</strong> 극단적인 설정과 스트레스 상황 속에서 LLM 페르소나의 유지 가능성과 한계를 실증적으로 검증.</li>
+</ul>
+<hr>
+<h2 id="프로젝트를-시작한-이유">프로젝트를 시작한 이유</h2>
 <p>페르소나는 많은 기업에서 구매 의사 예측, 세그먼테이션, 추천 시스템 등 분석 보조 도구로 활용되고 있습니다. 하지만 저희는 한 가지 의문이 들었습니다.</p>
 <blockquote>
 <p>LLM에 하나의 인격을 부여했을 때, 유저가 던지는 예측 불가능하고 복잡한 상황 속에서도 그 페르소나를 안정적으로 유지할 수 있을까?</p>
@@ -177,29 +183,34 @@
 <img src="/portfolio/assets/images/umi-game-page/1F_outside01.png" alt="게임 배경 이미지"  />
 </p>
 <hr>
-<h2 id="게임-소개">게임 소개</h2>
-<p><strong>UMI</strong>는 사이비 종교를 배경으로 한 LLM 기반 인터랙티브 게임입니다.</p>
-<ul>
-<li>고유한 성격, 말투, 신념을 가진 입체적인 NPC 캐릭터들과 실시간으로 대화합니다.</li>
-<li>NPC는 과거 대화를 기억하고, 현재 스탯(친밀도, 신뢰도, HP 등)에 맞춰 실시간으로 반응을 바꿉니다.</li>
-<li>사전 분류 모델이 대화 의도를 12가지 태그로 파악하여 스탯 증감 및 생존 분기에 즉각적으로 반영합니다.</li>
-</ul>
-<h3 id="플레이-사이클">플레이 사이클</h3>
-<ul>
-<li>유저는 맵을 이동하며 탐색을 통해 단서와 아이템을 획득합니다.</li>
-<li>NPC와 대화하며 허점을 공략하거나 친밀도를 쌓습니다.</li>
-<li>특정 아이템(솔피의 눈물)을 사용하면 오염도가 상승해 어안 렌즈 같은 패널티가 생기지만, 고위 NPC와 대화할 수 있는 기회를 얻습니다.</li>
-<li>하루가 끝나면 그날 발생한 사건을 Story Agent가 요약하고 장기 기억으로 동기화합니다.</li>
-<li>5일차 종료 후, 누적된 요약으로 엔딩이 생성됩니다.</li>
-</ul>
+<h2 id="-나의-주요-역할-및-기여">👨‍💻 나의 주요 역할 및 기여</h2>
+<p>저는 팀 내에서 유일하게 <strong>백엔드와 인프라 아키텍처 전반을 설계</strong>하고, <strong>AI 에이전트 파이프라인 최적화 및 프로젝트 리딩</strong>을 주도했습니다.</p>
+<h3 id="-서버-및-인프라-구축">🌐 서버 및 인프라 구축</h3>
+<p>FastAPI를 활용한 비동기 API 서버를 설계하고, AWS EC2 환경에 Docker를 활용해 파이프라인과 백엔드 서버를 배포 및 서빙했습니다.</p>
+<h3 id="-비동기-멀티-에이전트-설계">⚡ 비동기 멀티 에이전트 설계</h3>
+<p>Guardrail(BERT), 분류 모델, NPC Agent(Gemma), Story Agent(Qwen)로 이어지는 순차 추론 과정의 병목을 줄이기 위해 <code>asyncio</code> 기반의 비동기 로직을 구현했습니다.</p>
+<h3 id="-데이터-검증-및-에러-방어">🛡️ 데이터 검증 및 에러 방어</h3>
+<p>LLM 특유의 불안정한 프롬프트 응답(JSON 파싱 에러 등)을 제어하기 위해 서버 단에 Pydantic을 적용, 런타임 오류를 원천 차단했습니다.</p>
+<h3 id="-ai-페르소나-튜닝-및-실험">🧪 AI 페르소나 튜닝 및 실험</h3>
+<p>SFT(Supervised Fine-Tuning) 과정을 위해 여러 소형 LLM(Llama, Mistral, Gemma)에 페르소나를 주입하며 안정성을 비교하는 실험에 주도적으로 참여했습니다.</p>
+<h3 id="-발표-및-기술-공유">🎤 발표 및 기술 공유</h3>
+<p>프로젝트 과정과 한계, 해결책을 회고 형식으로 정리하여 최종 공개 발표를 이끌었습니다.</p>
+<hr>
+<h2 id="-전체-파이프라인-및-시스템-아키텍처">⚙️ 전체 파이프라인 및 시스템 아키텍처</h2>
+<p>저희 시스템은 유저가 발화할 때마다 다음과 같은 4단계 비동기 흐름으로 처리됩니다.</p>
+<ol>
+<li><strong>GA1 Safety</strong> → 욕설·탈옥 감지</li>
+<li><strong>분류 모델</strong> → 12가지 의도 태그 파악</li>
+<li><strong>NPC Agent</strong> → 스탯(친밀도 등) 반영 후 상황에 맞는 답변 생성</li>
+<li><strong>Story Agent</strong> → 대화 내용 요약 후 Vector DB에 기억 저장</li>
+</ol>
 <p>
 
   
 
-<img src="/portfolio/assets/images/umi-game-page/umi_play_cycle.png" alt="플레이 사이클"  />
+<img src="/portfolio/assets/images/umi-game-page/ai-agent-flow.png" alt="AI 에이전트 흐름도"  />
 </p>
-<hr>
-<h2 id="기술-스택">기술 스택</h2>
+<h3 id="기술-스택">기술 스택</h3>
 <table>
   <thead>
       <tr>
@@ -209,62 +220,55 @@
   </thead>
   <tbody>
       <tr>
-          <td>API 서버</td>
-          <td><strong>FastAPI</strong> + Uvicorn (ASGI 비동기)</td>
+          <td><strong>API 서버 / 인프라</strong></td>
+          <td><strong>FastAPI</strong> + Uvicorn (ASGI), <strong>AWS EC2</strong>, <strong>Docker</strong>, Nginx</td>
       </tr>
       <tr>
-          <td>데이터베이스</td>
+          <td><strong>데이터베이스</strong></td>
           <td><strong>MongoDB</strong> (Motor 비동기 드라이버)</td>
       </tr>
       <tr>
-          <td>LLM 오케스트레이션</td>
-          <td><strong>LangChain</strong>, LangSmith (모니터링·트레이싱)</td>
+          <td><strong>LLM 오케스트레이션</strong></td>
+          <td><strong>LangChain</strong>, LangSmith (모니터링)</td>
       </tr>
       <tr>
-          <td>모델 추론</td>
+          <td><strong>모델 추론</strong></td>
           <td><strong>HuggingFace Transformers</strong>, BitsAndBytes (양자화), PEFT</td>
       </tr>
       <tr>
-          <td>임베딩 &amp; 벡터 DB</td>
+          <td><strong>임베딩 &amp; 벡터 DB</strong></td>
           <td><strong>Sentence-Transformers</strong>, Vector DB (RAG)</td>
       </tr>
       <tr>
-          <td>인증</td>
-          <td><strong>JWT</strong></td>
-      </tr>
-      <tr>
-          <td>인프라</td>
-          <td><strong>Docker</strong>, Nginx</td>
-      </tr>
-      <tr>
-          <td>데이터 검증</td>
-          <td><strong>Pydantic</strong></td>
+          <td><strong>기타</strong></td>
+          <td><strong>JWT</strong> 인증, <strong>Pydantic</strong> 데이터 검증</td>
       </tr>
   </tbody>
 </table>
 <hr>
-<h2 id="ai-에이전트-구조">AI 에이전트 구조</h2>
-<h3 id="npc-agent--gemma-2-9b-it">NPC Agent — Gemma-2-9b-it</h3>
-<p>모델 선정 과정에서 Llama, Mistral, Gemma를 비교 평가했습니다. 응답 속도와 한국어 성능에서 <strong>Gemma</strong>가 가장 우수했습니다.</p>
-<p>초기에는 PEFT 기법을 적용했으나, 세계관을 이탈하는 현상이 빈번히 발생했습니다. 이후 <strong>SFT(Supervised Fine-Tuning)</strong> 으로 전환하여 페르소나 일관성을 확보했습니다. 구어체 자연스러움을 위해 GPT-4o mini로 학습 데이터를 생성한 뒤 <strong>Gemma-2-9b-it</strong> 모델을 파인튜닝했습니다.</p>
+<h2 id="-ai-에이전트-모델-선정-기준">🤖 AI 에이전트 모델 선정 기준</h2>
+<p>수많은 텍스트 생성 특징을 가진 오픈소스 모델들을 직접 테스트해 보며, 게임 환경의 요구 사항에 가장 강력한 퍼포먼스를 내는 모델들로 최종 결정했습니다.</p>
+<h3 id="1-npc-agent--gemma-2-9b-it">1. NPC Agent — Gemma-2-9b-it</h3>
+<p>게임 몰입도를 좌우하는 가장 중요한 핵심 모델이므로 <strong>응답 속도(Latency)와 한국어 구어체 표현력</strong>이 1순위 기준이었습니다.
+Llama-3, Mistral, Gemma-2 구조를 비교했을 때 <code>Gemma-2-9b-it</code>가 반응 반응 속도 대비 자연스러운 한국어 티키타카를 가장 잘 보여주었습니다. 처음엔 PEFT(LoRA) 기법을 사용했으나 사이비 종교라는 독특한 세계관을 이탈하는 문제가 발생해, GPT-4o mini로 자체 구축한 대화 데이터를 이용해 <strong>SFT(Supervised Fine-Tuning)</strong> 를 전체 학습시켜 일관성 있는 사이코패스 페르소나를 확보했습니다.</p>
 <p>
 
   
 
 <img src="/portfolio/assets/images/umi-game-page/gemma-2-9b-it.png" alt="gemma-2-9b-it"  />
 </p>
-<h3 id="guardrail--2단계-안전장치">Guardrail — 2단계 안전장치</h3>
-<p>유저의 발화가 NPC Agent에 전달되기 전에 두 단계의 가드레일을 통과합니다.</p>
-<p><strong>(Safety):</strong> <code>bert-base-multilingual-cased</code> 모델을 사용해 욕설·비속어·탈옥 시도를 감지합니다. AI 허브의 &lsquo;텍스트 윤리 검증&rsquo; 데이터셋으로 파인튜닝했습니다. 3회 감지 시 인 게임 하루를 강제로 넘기는 패널티가 부여됩니다.</p>
+<h3 id="2-guardrail-safety--bert-base-multilingual-cased">2. Guardrail (Safety) — bert-base-multilingual-cased</h3>
+<p>유저가 NPC에게 도를 넘는 욕설을 하거나 시스템 탈옥(Jailbreak) 프롬프트를 입력하는 것을 걸러내는 보안 필터입니다.
+분류 및 이상 감지에 처리 속도가 매우 빠르고 가벼워야 했기 때문에 <code>BERT</code> 아키텍처를 선택했습니다. AI 허브의 &lsquo;텍스트 윤리 검증&rsquo; 데이터셋으로 파인튜닝을 거쳐 높은 F1-score를 확보했습니다. (해당 봇에 3회 적발 시 게임 내에서 하루를 강제로 날려버리는 패널티가 발생합니다.)</p>
 <p>
 
   
 
 <img src="/portfolio/assets/images/umi-game-page/bert-base-multilingual-cased.png" alt="bert-base-multilingual-cased"  />
 </p>
-<h3 id="story-agent--qwen-7b">Story Agent — Qwen-7b</h3>
-<p>Llama, Mistral, Gemma를 스토리 요약 작업으로 비교했을 때, <strong>Qwen</strong>이 어휘력과 표현력에서 가장 뛰어났습니다.</p>
-<p>Story Agent는 NPC별 대화 내용을 요약해 <strong>Vector DB</strong>에 장기 기억으로 저장합니다. 이 기억은 이후 RAG 방식으로 검색되어 NPC의 답변 생성에 활용됩니다.</p>
+<h3 id="3-story-agent--qwen-7b">3. Story Agent — Qwen-7b</h3>
+<p>게임 내 세션(하루)이 끝날 때, 그동안의 방대한 대화 로그를 압축하여 핵심 사건으로 요약하는 역할을 담당합니다.
+장문(Long-context) 입력 환경에서의 주요 인과관계 도출 능력을 측정했을 때, <code>Qwen-7B</code>가 Llama 계열 모델보다 환각(Hallucination) 현상이 적고 어휘 표현력이 풍부하여 수많은 히스토리를 가장 완벽하게 요약해냈습니다.</p>
 <p>
 
   
@@ -272,50 +276,43 @@
 <img src="/portfolio/assets/images/umi-game-page/qwen-7b.jpg" alt="qwen-7b"  />
 </p>
 <hr>
-<h2 id="전체-파이프라인">전체 파이프라인</h2>
-<p>유저가 발화하면 다음 흐름으로 처리됩니다.</p>
-<ol>
-<li><strong>GA1 Safety</strong> → 욕설·탈옥 감지</li>
-<li><strong>분류 모델</strong> → 12가지 의도 태그 파악</li>
-<li><strong>NPC Agent</strong> → 스탯 반영 후 답변 생성 (대화 마스킹 적용)</li>
-<li><strong>Story Agent</strong> → 대화 요약 후 Vector DB에 저장</li>
-</ol>
+<h2 id="-게임-플레이-사이클">🎮 게임 플레이 사이클</h2>
+<p><strong>UMI</strong>는 다음과 같은 사이클로 진행됩니다.</p>
+<ul>
+<li>유저는 맵을 이동하며 탐색을 통해 단서와 아이템을 획득합니다.</li>
+<li>고유 페르소나를 지닌 범죄자 NPC들과 대화하며 허점을 찌르거나 친밀도를 변화시킵니다.</li>
+<li>치명적인 아이템(솔피의 눈물)을 사용해 오염도 패널티를 감수하는 대신, 고위 NPC에게 접근할 수 있는 전략적 선택을 할 수 있습니다.</li>
+<li>하루가 종료되면, Story Agent가 그날의 사건 요약을 Vector DB에 <strong>장기 기억(Long-term Memory)으로 동기화</strong>하여 다음 날 NPC의 기억과 행동에 직접적인 영향을 미치게 합니다.</li>
+<li>5일차 생존 시, 누적된 요약 데이터를 토대로 플레이어만의 최종 엔딩이 생성됩니다.</li>
+</ul>
 <p>
 
   
 
-<img src="/portfolio/assets/images/umi-game-page/ai-agent-flow.png" alt="AI 에이전트 흐름도"  />
+<img src="/portfolio/assets/images/umi-game-page/umi_play_cycle.png" alt="플레이 사이클"  />
 </p>
-<h3 id="백엔드-안정성-확보">백엔드 안정성 확보</h3>
+<hr>
+<h2 id="-게임-시연-영상">🎥 게임 시연 영상</h2>
 <ul>
-<li><strong>비동기 파이프라인:</strong> BERT부터 Qwen까지 이어지는 다중 에이전트 구조를 <code>asyncio</code> 기반으로 비동기 처리하여 병목을 최소화했습니다.</li>
-<li><strong>출력 포맷 안정화:</strong> LLM의 비정형 출력을 Pydantic 스키마로 변환하여 런타임 오류를 원천 차단했습니다.</li>
-<li><strong>리소스 모니터링:</strong> CPU·RAM·GPU 사용량을 실시간으로 확인할 수 있는 헬스 체크 엔드포인트를 구현했습니다.</li>
+<li><a href="https://youtu.be/kBFtGbRGuVI">튜토리얼 영상 살펴보기</a></li>
+<li><a href="https://youtu.be/tg3XeJHV_XE">NPC 대화 흐름 영상</a></li>
 </ul>
 <hr>
-<h2 id="플레이-영상">플레이 영상</h2>
-<ul>
-<li><a href="https://youtu.be/kBFtGbRGuVI">튜토리얼 영상</a></li>
-<li><a href="https://youtu.be/tg3XeJHV_XE">NPC 대화 영상</a></li>
-</ul>
-<hr>
-<h2 id="회고">회고</h2>
+<h2 id="-프로젝트-회고">💡 프로젝트 회고</h2>
 <h3 id="페르소나를-만든다는-것">페르소나를 만든다는 것</h3>
-<p>페르소나 구현이 단순히 설정한 성격대로 말하게 하는 것이 아님을 뼈저리게 느꼈다. 어떤 어투로, 어떤 상황에서, 어떤 감정으로 말하는지까지 인문학적으로 고민하지 않으면 진짜 &lsquo;인격체&rsquo;를 만들 수 없다는 걸 깨달았다. 기획에 2주 이상을 쏟은 이유이기도 했고, 그게 동시에 개발 시간을 압박한 이유이기도 했다.</p>
+<p>페르소나 구현이 단순히 &lsquo;너는 친절한 사람이야&rsquo;라고 설정해 말하게 하는 것이 아님을 뼈저리게 느꼈다. 어떤 어투로, 어떤 상황에서, 어떤 논리적 결여를 가지고 말하는지 인문학적으로 촘촘히 고민하지 않으면 진짜 &lsquo;인격체&rsquo;를 만들 수 없다는 걸 깨달았다. 기획에 2주 이상을 쏟은 이유이기도 했고, 그게 게임의 핵심 재미였기에 백엔드 개발 일정이 압박을 받아도 포기할 수 없는 과정이었다.</p>
 <h3 id="rag의-현실적인-한계">RAG의 현실적인 한계</h3>
-<p>게임 내에서 LLM과 대화를 거듭하면서 <strong>Vector DB RAG의 구조적 한계</strong>를 체감했다. 단순 키워드 유사도로 메모리를 검색하다 보니, 문맥과 무관한 기억을 불러오거나 인물 간의 관계를 혼동하는 문제가 반복됐다. 이 문제를 해결하기 위한 방향으로 <strong>Graph RAG</strong>를 알게 됐다. 대화 내역을 엔티티와 관계 기반의 노드로 구조화하면, &lsquo;누가 누구를 의심하는지&rsquo; 같은 고차원적인 관계 추론이 가능해진다. 시간이 됐다면 꼭 적용해보고 싶었다.</p>
-<h3 id="응답-지연-문제">응답 지연 문제</h3>
-<p>페르소나를 입힌 LLM과의 실시간 대화에서 <strong>1.3~2.5초</strong> 정도의 응답 지연이 발생했다. 문장 수를 제한해서 어느 정도 줄였지만, 게임의 몰입감을 높이려면 더 줄여야 한다고 느꼈다. 이후 vLLM의 <strong>PagedAttention</strong>과 <strong>Prefix Caching</strong> 기법을 찾아봤는데, NPC 페르소나와 금기어 프롬프트처럼 매 턴 반복되는 고정 입력을 캐싱 처리하면 추론 부하를 크게 줄일 수 있다는 걸 알게 됐다. 5주라는 시간 안에 기획-개발-배포-발표를 모두 처리해야 했기에 적용하지 못한 게 아쉬웠다.</p>
+<p>게임 내에서 연속된 대화를 거듭하면서 <strong>Vector DB 기반 RAG 시스템의 한계</strong>를 체감했다. 단순 의미 유사도로 대화 기록을 검색하다 보니, 현재 문맥과 무관한 과거 발언을 끌고 오거나 얽히고설킨 등장인물 간의 관계를 혼동하는 치명적인 버그가 발생했다. 이 문제를 돌파하기 위한 방법으로 <strong>Graph RAG</strong>의 필요성을 절실히 깨달았다. 대화 내역을 인물과 사건 중심의 노드(Entity &amp; Relation)로 구조화하면, &lsquo;누가 누구를 의심하는지&rsquo; 같은 고차원적 인과관계 추론이 가능해진다는 것을 데이터로 실감했다.</p>
+<h3 id="응답-지연latency-문제와-최적화의-아쉬움">응답 지연(Latency) 문제와 최적화의 아쉬움</h3>
+<p>페르소나가 무겁게 입혀진 다중 프롬프트 구조 상 <strong>초기 응답에 1.3~2.5초</strong> 정도의 답답한 생성 지연이 발생했다. 문장 생성을 강제로 짧게 제한해서 간신히 줄였지만 게임의 실시간 텐션을 위해서는 더 나은 튜닝이 절실했다. 프로젝트 후반부에 문제 해결 리서치를 하며 vLLM의 <strong>PagedAttention</strong>과 <strong>Prefix Caching</strong> 기법을 발굴했다. 매 턴마다 중복으로 들어가는 &lsquo;NPC 사전 설정&rsquo;과 &lsquo;금기어 룰&rsquo; 시스템 프롬프트를 캐싱해 두면 백엔드 추론 부하를 획기적으로 낮출 수 있었을 텐데, 5주 간의 촉박한 마감 시간으로 인해 직접 서버에 도입해 보지 못한 것이 지금도 가장 큰 아쉬움으로 남는다.</p>
 <hr>
-<h2 id="고도화-로드맵">고도화 로드맵</h2>
+<h2 id="-고도화-로드맵-next-steps">🚀 고도화 로드맵 (Next Steps)</h2>
 <ul>
-<li><strong>Graph RAG 도입:</strong> Vector DB 기반 RAG를 대체하여 인물 관계망 기반의 정확한 기억 검색 구현</li>
-<li><strong>vLLM + PagedAttention:</strong> 메모리 단편화 해결 및 첫 토큰 생성 시간(TTFT) 단축</li>
-<li><strong>Prefix Caching:</strong> 반복 입력되는 고정 프롬프트 캐싱으로 추론 부하 절감</li>
+<li><strong>Graph RAG 도입:</strong> 단순 Vector 기반 유사도 검색을 넘어, 관계망 기반(Entity-centric)의 정확하고 파편화 없는 장기 기억 아키텍처 구축.</li>
+<li><strong>vLLM + PagedAttention 적용:</strong> KV 캐시의 메모리 단편화 문제를 해결하여 실시간 텍스트 첫 토큰 생성 시간(TTFT) 비약적 단축 설계.</li>
+<li><strong>Prefix Caching 처리:</strong> 변동되지 않는 고정된 컨텍스트(월드 빌드 룰, 안전 가드레일 제약조건 등)에 대한 연산 재사용으로 한정된 서버 자원의 처리량 극대화.</li>
 </ul>
-<hr>
-<p><strong>마치며&hellip;</strong>
-
+<p>
 
   
 
