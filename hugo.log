@@ -185,3 +185,9 @@ Total in 13 ms
 Change of Static files detected, rebuilding site (#31).
 2026-03-08 20:34:24.764 +0900
 Syncing /assets/css/style.css to /
+
+Change detected, rebuilding site (#32).
+2026-03-08 20:36:55.257 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 9 ms
