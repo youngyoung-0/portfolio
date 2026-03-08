@@ -191,3 +191,7 @@ Change detected, rebuilding site (#32).
 Template changed /index.html
 Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
 Total in 9 ms
+
+Change of Static files detected, rebuilding site (#33).
+2026-03-08 20:39:52.782 +0900
+Syncing /assets/css/style.css to /
