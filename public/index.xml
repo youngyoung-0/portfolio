@@ -16,13 +16,6 @@
       <description>&lt;p&gt;기술 블로그형 포트폴리오를 Hugo 기반으로 재구성했습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;진행-내용&#34;&gt;진행 내용&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;기존 데모 섹션을 제거하고 About + Blog 중심으로 정보 구조를 단순화했습니다.&lt;/li&gt;&#xA;&lt;li&gt;프로필 정보는 &lt;code&gt;hugo.toml&lt;/code&gt;에서 일괄 관리하도록 정리했습니다.&lt;/li&gt;&#xA;&lt;li&gt;활동 이력은 &lt;code&gt;categories: [&amp;quot;Activities&amp;quot;]&lt;/code&gt; 규칙으로 About 타임라인에서 자동 노출되게 했습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;결과&#34;&gt;결과&lt;/h2&gt;&#xA;&lt;p&gt;콘텐츠 작성 흐름이 단순해졌고, 활동 이력과 일반 개발 글을 같은 작성 방식으로 관리할 수 있게 됐습니다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>기술 블로그 포트폴리오 구축</title>
-      <link>http://localhost:1313/portfolio/posts/umi-game/</link>
-      <pubDate>Thu, 05 Mar 2026 15:10:00 +0900</pubDate>
-      <guid>http://localhost:1313/portfolio/posts/umi-game/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Activities 안내</title>
       <link>http://localhost:1313/portfolio/activities/</link>
       <pubDate>Thu, 05 Mar 2026 14:00:00 +0900</pubDate>
@@ -30,11 +23,18 @@
       <description>&lt;h3 id=&#34;activities-분류-기준&#34;&gt;Activities 분류 기준&lt;/h3&gt;&#xA;&lt;p&gt;활동 이력은 별도 타입이 아니라 &lt;code&gt;content/posts&lt;/code&gt; 내부 글에서 &lt;code&gt;categories: [&amp;quot;Activities&amp;quot;]&lt;/code&gt;로 분류합니다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;홈 About 탭의 Activities 타임라인은 해당 카테고리를 가진 최신 글을 자동으로 노출합니다.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
+      <title>UMI — LLM 기반 인터랙티브 게임 백엔드</title>
+      <link>http://localhost:1313/portfolio/posts/umi-game/</link>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/portfolio/posts/umi-game/</guid>
+      <description>&lt;h2 id=&#34;프로젝트를-시작한-이유&#34;&gt;프로젝트를 시작한 이유&lt;/h2&gt;&#xA;&lt;p&gt;페르소나는 많은 기업에서 구매 의사 예측, 세그먼테이션, 추천 시스템 등 분석 보조 도구로 활용되고 있습니다. 하지만 저희는 한 가지 의문이 들었습니다.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;LLM에 하나의 인격을 부여했을 때, 유저가 던지는 예측 불가능하고 복잡한 상황 속에서도 그 페르소나를 안정적으로 유지할 수 있을까?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;이를 실험하기 위한 무대로 &lt;strong&gt;게임&lt;/strong&gt;이 적합하다고 판단했습니다. 게임 환경은 돌발적인 대화를 자연스럽게 유도하고, 실시간 NPC 반응을 통해 페르소나의 일관성을 눈으로 직접 확인할 수 있기 때문입니다.&lt;/p&gt;&#xA;&lt;p&gt;세계관으로는 &lt;strong&gt;사이비 종교&lt;/strong&gt;를 선택했습니다. 외부와 단절된 폐쇄 환경에서 대화·심리에 집중할 수 있고, 비이성적인 가치관과 &amp;lsquo;생존과 탈출&amp;rsquo;이라는 명확한 목표가 유저의 몰입감을 극대화할 수 있다고 생각했습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>마크다운 이미지 첨부 테스트</title>
       <link>http://localhost:1313/portfolio/posts/image-test/</link>
       <pubDate>Wed, 04 Mar 2026 12:05:00 +0900</pubDate>
       <guid>http://localhost:1313/portfolio/posts/image-test/</guid>
-      <description>&lt;p&gt;안녕하세요! 블로그에 글을 작성하면서 이미지를 첨부하는 것은 가독성을 높이는데 필수적입니다.&#xA;Hugo에서는 &lt;code&gt;static&lt;/code&gt; 폴더를 루트 디렉터리로 취급합니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;이미지-렌더링-예시&#34;&gt;이미지 렌더링 예시&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같이 &lt;code&gt;static/assets/images&lt;/code&gt; 경로 이미지를 손쉽게 마크다운 문법으로 불러올 수 있습니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/portfolio/assets/images/blog-1.jpg&#34; alt=&#34;샘플 이미지 테스트&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;코드 예시:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;![&lt;span style=&#34;color:#f92672&#34;&gt;샘플 이미지 이름&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;/assets/images/blog-1.jpg&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이와 같이 작성하면 로컬 서버와 실제 배포 환경 모두에서 이미지가 자연스럽게 렌더링됩니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;안녕하세요! 블로그에 글을 작성하면서 이미지를 첨부하는 것은 가독성을 높이는데 필수적입니다.&#xA;Hugo에서는 &lt;code&gt;static&lt;/code&gt; 폴더를 루트 디렉터리로 취급합니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;이미지-렌더링-예시&#34;&gt;이미지 렌더링 예시&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같이 &lt;code&gt;static/assets/images&lt;/code&gt; 경로 이미지를 손쉽게 마크다운 문법으로 불러올 수 있습니다.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&#xA;  &#xA;&#xA;&lt;img src=&#34;http://localhost:1313/portfolio/assets/images/blog-1.jpg&#34; alt=&#34;샘플 이미지 테스트&#34;  /&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;코드 예시:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;![&lt;span style=&#34;color:#f92672&#34;&gt;샘플 이미지 이름&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;/assets/images/blog-1.jpg&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이와 같이 작성하면 로컬 서버와 실제 배포 환경 모두에서 이미지가 자연스럽게 렌더링됩니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>나의 첫 번째 트러블슈팅 기록</title>

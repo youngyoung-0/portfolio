@@ -7,10 +7,10 @@
     <nav class="navbar">
       <ul class="navbar-list">
         <li class="navbar-item">
-          <a href="/" class="navbar-link">Home</a>
+          <a href="{{ site.Home.RelPermalink }}" class="navbar-link">Home</a>
         </li>
         <li class="navbar-item">
-          <a href="/posts/" class="navbar-link active">Blog</a>
+          <a href="{{ "posts/" | relURL }}" class="navbar-link active">Blog</a>
         </li>
       </ul>
     </nav>

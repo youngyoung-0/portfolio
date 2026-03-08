@@ -21,8 +21,8 @@
     <meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
     <meta name="twitter:description" content="{{ $desc }}">
 
-    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" href="{{ "assets/images/logo.ico" | relURL }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ "assets/css/style.css" | relURL }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@
 
     {{- /* Syntax highlighting CSS if needed */ -}}
     {{ if .IsPage }}
-    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="stylesheet" href="{{ "assets/css/syntax.css" | relURL }}">
     {{ end }}
 </head>
 

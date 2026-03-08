@@ -4,13 +4,13 @@
       {{ if site.Params.profileMode.imageUrl }}
       <img src="{{ site.Params.profileMode.imageUrl }}" alt="{{ site.Params.author }}" width="80">
       {{ else }}
-      <img src="/assets/images/my-avatar.png" alt="{{ site.Params.author }}" width="80">
+      <img src="{{ "assets/images/my-avatar.png" | relURL }}" alt="{{ site.Params.author }}" width="80">
       {{ end }}
     </figure>
 
     <div class="info-content">
       <h1 class="name" title="{{ site.Params.author }}">
-        <a href="/" style="color: inherit;">{{ site.Params.author }}</a>
+        <a href="{{ site.Home.RelPermalink }}" style="color: inherit;">{{ site.Params.author }}</a>
       </h1>
       <p class="title">Web Developer</p>
     </div>
