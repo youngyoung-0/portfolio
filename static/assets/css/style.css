@@ -1995,3 +1995,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-size: 1.03rem;
   line-height: 1.75;
 }
+
+/* Activities Link Overrides */
+.timeline-item-title a {
+  color: var(--white-2, #fafafa);
+  text-decoration: none;
+  transition: none;
+}
+.timeline-item-title a:hover {
+  color: var(--white-2, #fafafa);
+  text-decoration: none;
+}
