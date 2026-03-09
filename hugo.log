@@ -229,3 +229,51 @@ Change detected, rebuilding site (#39).
 Source changed /posts/umi-game.md
 Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
 Total in 11 ms
+
+Change detected, rebuilding site (#40).
+2026-03-09 16:27:09.408 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 56 ms
+
+Change detected, rebuilding site (#41).
+2026-03-09 16:29:44.394 +0900
+Source changed /posts/activity-startup-infra.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 15 ms
+
+Change detected, rebuilding site (#42).
+2026-03-09 16:47:41.486 +0900
+Source changed /posts/activity-startup-infra.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 69 ms
+
+Change detected, rebuilding site (#43).
+2026-03-09 16:47:42.922 +0900
+Source changed /posts/activity-innooz.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 8 ms
+
+Change detected, rebuilding site (#44).
+2026-03-09 16:47:45.421 +0900
+Source changed /posts/activity-marketit.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 6 ms
+
+Change detected, rebuilding site (#45).
+2026-03-09 16:47:47.421 +0900
+Source changed /posts/activity-walla.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 6 ms
+
+Change detected, rebuilding site (#46).
+2026-03-09 16:50:08.927 +0900
+Source changed /posts/activity-innooz.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 14 ms
+
+Change detected, rebuilding site (#47).
+2026-03-09 16:57:20.938 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 16 ms

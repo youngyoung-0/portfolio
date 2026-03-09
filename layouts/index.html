@@ -74,9 +74,17 @@
 
         <ol class="timeline-list">
           {{ if gt (len $activities) 0 }}
-          {{ range first 4 ($activities.ByDate.Reverse) }}
+          {{ range ($activities.ByDate.Reverse) }}
           <li class="timeline-item">
-            <h4 class="h4 timeline-item-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+            <h4 class="h4 timeline-item-title">
+              {{ if .Params.disableLink }}
+                {{ .Title }}
+              {{ else if .Params.externalUrl }}
+                <a href="{{ .Params.externalUrl }}" target="_blank" rel="noopener noreferrer">{{ .Title }}</a>
+              {{ else }}
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ end }}
+            </h4>
             <span>{{ .Date.Format "2006. 01" }}</span>
             <p class="timeline-text">{{ .Summary | plainify | htmlUnescape | truncate 140 }}</p>
           </li>
