@@ -44,6 +44,13 @@
       <description></description>
     </item>
     <item>
+      <title>Project</title>
+      <link>http://localhost:57086/portfolio/tags/project/</link>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:57086/portfolio/tags/project/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>RAG</title>
       <link>http://localhost:57086/portfolio/tags/rag/</link>
       <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
@@ -97,6 +104,13 @@
       <link>http://localhost:57086/portfolio/tags/%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85/</link>
       <pubDate>Wed, 04 Mar 2026 12:00:00 +0900</pubDate>
       <guid>http://localhost:57086/portfolio/tags/%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Company</title>
+      <link>http://localhost:57086/portfolio/tags/company/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:57086/portfolio/tags/company/</guid>
       <description></description>
     </item>
     <item>
@@ -160,6 +174,13 @@
       <link>http://localhost:57086/portfolio/tags/node.js/</link>
       <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
       <guid>http://localhost:57086/portfolio/tags/node.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Education</title>
+      <link>http://localhost:57086/portfolio/tags/education/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:57086/portfolio/tags/education/</guid>
       <description></description>
     </item>
   </channel>

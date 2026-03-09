@@ -2,7 +2,7 @@
 title: "UMI — LLM 기반 인터랙티브 게임 백엔드"
 date: 2026-03-05
 draft: false
-tags: ["UMI", "LLM", "게임", "멀티에이전트", "FastAPI", "RAG", "회고"]
+tags: ["Project", "UMI", "LLM", "게임", "멀티에이전트", "FastAPI", "RAG", "회고"]
 categories: ["Activities"]
 description: "사이비 종교 세계관을 배경으로, LLM 페르소나의 안정성을 실증적으로 검증한 인터랙티브 게임 'UMI'의 백엔드 개발기"
 ---

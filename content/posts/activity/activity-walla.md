@@ -2,7 +2,7 @@
 title: "서비스 백엔드 개발 · ㈜왈라아이시티"
 date: 2021-09-01
 draft: false
-tags: ["DB설계", "ERD", "Node.js", "Firebase"]
+tags: ["Company", "DB설계", "ERD", "Node.js", "Firebase"]
 categories: ["Activities"]
 description: "소품 공유 및 중고 가전 거래 서비스 백엔드 및 DB 구축"
 disableLink: true

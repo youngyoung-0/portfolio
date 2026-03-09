@@ -277,3 +277,155 @@ Change detected, rebuilding site (#47).
 Template changed /index.html
 Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
 Total in 16 ms
+
+Change detected, rebuilding site (#48).
+2026-03-09 17:02:39.946 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 22 ms
+adding created directory to watchlist /Users/young/git/portfolio/content/posts/activity
+
+Change detected, rebuilding site (#49).
+2026-03-09 17:02:53.945 +0900
+Source changed /posts/activity-innooz.md
+Source changed /posts/activity-marketit.md
+Source changed /posts/activity-portfolio-build.md
+Source changed /posts/activity-walla.md
+Source changed /posts/activity/activity-innooz.md
+Source changed /posts/activity/activity-marketit.md
+Source changed /posts/activity/activity-portfolio-build.md
+Source changed /posts/activity/activity-walla.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 11 ms
+
+Change detected, rebuilding site (#50).
+2026-03-09 17:10:36.460 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 25 ms
+
+Change detected, rebuilding site (#51).
+2026-03-09 17:11:44.959 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 9 ms
+
+Change detected, rebuilding site (#52).
+2026-03-09 17:12:32.460 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 9 ms
+
+Change detected, rebuilding site (#53).
+2026-03-09 17:13:21.887 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 8 ms
+
+Change of config file detected, rebuilding site (#54).
+2026-03-09 17:16:09.894 +0900
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Rebuilt in 45 ms
+
+Change of Static files detected, rebuilding site (#55).
+2026-03-09 17:46:24.893 +0900
+Syncing /assets/css/style.css to /
+
+Change detected, rebuilding site (#56).
+2026-03-09 17:46:37.892 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 54 ms
+
+Change detected, rebuilding site (#57).
+2026-03-09 17:47:14.892 +0900
+Source changed /posts/umi-game.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 14 ms
+
+Change detected, rebuilding site (#58).
+2026-03-09 17:47:27.392 +0900
+Source changed /posts/activity/activity-innooz.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 7 ms
+
+Change detected, rebuilding site (#59).
+2026-03-09 17:47:38.395 +0900
+Source changed /posts/activity/activity-marketit.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 22 ms
+
+Change detected, rebuilding site (#60).
+2026-03-09 17:47:55.393 +0900
+Source changed /posts/activity/activity-walla.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 18 ms
+
+Change of Static files detected, rebuilding site (#61).
+2026-03-09 17:51:09.401 +0900
+Syncing /assets/css/style.css to /
+
+Change detected, rebuilding site (#62).
+2026-03-09 17:51:26.904 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 14 ms
+
+Change of Static files detected, rebuilding site (#63).
+2026-03-09 17:51:39.903 +0900
+Syncing /assets/js/script.js to /
+
+Change of Static files detected, rebuilding site (#64).
+2026-03-09 17:53:32.906 +0900
+Syncing /assets/css/style.css to /
+
+Change detected, rebuilding site (#65).
+2026-03-09 17:55:08.916 +0900
+Source changed /posts/activity/activity-innooz.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 17 ms
+
+Change detected, rebuilding site (#66).
+2026-03-09 17:55:15.905 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 7 ms
+
+Change detected, rebuilding site (#67).
+2026-03-09 17:55:22.404 +0900
+Source changed /posts/activity/activity-walla.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 6 ms
+
+Change detected, rebuilding site (#68).
+2026-03-09 17:55:24.404 +0900
+Source changed /posts/activity/activity-marketit.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 5 ms
+
+Change detected, rebuilding site (#69).
+2026-03-09 17:55:24.905 +0900
+Source changed /posts/activity/activity-innooz.md
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 7 ms
+
+Change of Static files detected, rebuilding site (#70).
+2026-03-09 17:55:32.406 +0900
+Syncing /assets/css/style.css to /
+
+Change of Static files detected, rebuilding site (#71).
+2026-03-09 17:56:07.595 +0900
+Syncing /assets/css/style.css to /
+
+Change detected, rebuilding site (#72).
+2026-03-09 18:02:28.408 +0900
+Template changed /index.html
+ERROR Rebuild failed: render: [en v1.0.0 guest] failed to render pages: render of "/" failed: "/Users/young/git/portfolio/layouts/index.html:68:26": execute of template failed at <where $allActivities ".Params.tags" "intersect" (slice "Project") "==" false>: error calling where: can’t evaluate the array by no match argument or more than or equal to two arguments
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 13 ms
+
+Change detected, rebuilding site (#73).
+2026-03-09 18:03:10.909 +0900
+Template changed /index.html
+Web Server is available at http://localhost:1313/portfolio/ (bind address 127.0.0.1)
+Total in 12 ms

@@ -2014,3 +2014,78 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin: 0 !important;
   padding: 0 !important;
 }
+
+/* Activity Category Tags */
+.activity-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #ffffff !important;
+}
+.activity-tag-Project { background-color: #A855F7; }
+.activity-tag-Education { background-color: #10B981; }
+.activity-tag-Award { background-color: #F59E0B; }
+.activity-tag-Company { background-color: #3B82F6; }
+
+/* Activity Filter UI */
+.activity-filter-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+.activity-filter-btn {
+  background: transparent;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: var(--fs-7);
+  font-weight: 600;
+  transition: var(--transition-1);
+  cursor: pointer;
+}
+.activity-filter-btn[data-filter="all"] {
+  border: 1px solid var(--jet);
+  color: var(--light-gray);
+}
+.activity-filter-btn[data-filter="all"]:hover, .activity-filter-btn[data-filter="all"].active {
+  background: var(--jet);
+  color: var(--white-2);
+}
+.activity-filter-btn[data-filter="Project"] {
+  border: 1px solid #A855F7;
+  color: #A855F7;
+}
+.activity-filter-btn[data-filter="Project"]:hover, .activity-filter-btn[data-filter="Project"].active {
+  background: #A855F7;
+  color: #fff;
+}
+.activity-filter-btn[data-filter="Education"] {
+  border: 1px solid #10B981;
+  color: #10B981;
+}
+.activity-filter-btn[data-filter="Education"]:hover, .activity-filter-btn[data-filter="Education"].active {
+  background: #10B981;
+  color: #fff;
+}
+.activity-filter-btn[data-filter="Award"] {
+  border: 1px solid #F59E0B;
+  color: #F59E0B;
+}
+.activity-filter-btn[data-filter="Award"]:hover, .activity-filter-btn[data-filter="Award"].active {
+  background: #F59E0B;
+  color: #fff;
+}
+.activity-filter-btn[data-filter="Company"] {
+  border: 1px solid #3B82F6;
+  color: #3B82F6;
+}
+.activity-filter-btn[data-filter="Company"]:hover, .activity-filter-btn[data-filter="Company"].active {
+  background: #3B82F6;
+  color: #fff;
+}
+

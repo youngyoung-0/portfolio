@@ -62,6 +62,43 @@
       </section>
 
       <section class="timeline">
+        {{ $posts := where site.RegularPages "Section" "posts" }}
+        {{ $allActivities := where site.RegularPages ".Params.categories" "intersect" (slice "Activities") }}
+        {{ $projects := where $allActivities ".Params.tags" "intersect" (slice "Project") }}
+        {{ $activities := $allActivities | complement $projects }}
+
+        <!-- Projects Section -->
+        {{ if gt (len $projects) 0 }}
+        <div class="title-wrapper" style="margin-top: 30px;">
+          <div class="icon-box">
+            <ion-icon name="rocket-outline"></ion-icon>
+          </div>
+          <h3 class="h3">Projects</h3>
+        </div>
+
+        <ol class="timeline-list" style="margin-bottom: 40px;">
+          {{ range ($projects.ByDate.Reverse) }}
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">
+              {{ if .Params.disableLink }}
+                {{ .Title }}
+              {{ else if .Params.externalUrl }}
+                <a href="{{ .Params.externalUrl }}" target="_blank" rel="noopener noreferrer">{{ .Title }} 🔗</a>
+              {{ else }}
+                <a href="{{ .RelPermalink }}">{{ .Title }} 🔗</a>
+              {{ end }}
+            </h4>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span>{{ .Date.Format "2006. 01" }}</span>
+              <span class="activity-tag activity-tag-Project">Project</span>
+            </div>
+            <p class="timeline-text">{{ .Summary | plainify | htmlUnescape | truncate 140 }}</p>
+          </li>
+          {{ end }}
+        </ol>
+        {{ end }}
+
+        <!-- Activities Section -->
         <div class="title-wrapper">
           <div class="icon-box">
             <ion-icon name="book-outline"></ion-icon>
@@ -69,23 +106,42 @@
           <h3 class="h3">Activities</h3>
         </div>
 
-        {{ $posts := where site.RegularPages "Section" "posts" }}
-        {{ $activities := where $posts ".Params.categories" "intersect" (slice "Activities") }}
+        <ul class="activity-filter-list">
+          <li class="activity-filter-item">
+            <button class="activity-filter-btn active" data-filter="all">All</button>
+          </li>
+          <li class="activity-filter-item">
+            <button class="activity-filter-btn" data-filter="Education">Education</button>
+          </li>
+          <li class="activity-filter-item">
+            <button class="activity-filter-btn" data-filter="Company">Company</button>
+          </li>
+          <li class="activity-filter-item">
+            <button class="activity-filter-btn" data-filter="Award">Award</button>
+          </li>
+        </ul>
 
         <ol class="timeline-list">
           {{ if gt (len $activities) 0 }}
           {{ range ($activities.ByDate.Reverse) }}
-          <li class="timeline-item">
+          <li class="timeline-item activity-item" data-activity-tags="{{ delimit .Params.tags "," }}">
             <h4 class="h4 timeline-item-title">
               {{ if .Params.disableLink }}
                 {{ .Title }}
               {{ else if .Params.externalUrl }}
-                <a href="{{ .Params.externalUrl }}" target="_blank" rel="noopener noreferrer">{{ .Title }}</a>
+                <a href="{{ .Params.externalUrl }}" target="_blank" rel="noopener noreferrer">{{ .Title }} 🔗</a>
               {{ else }}
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}">{{ .Title }} 🔗</a>
               {{ end }}
             </h4>
-            <span>{{ .Date.Format "2006. 01" }}</span>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span>{{ .Date.Format "2006. 01" }}</span>
+              {{ range .Params.tags }}
+                {{ if or (eq . "Education") (eq . "Award") (eq . "Company") }}
+                  <span class="activity-tag activity-tag-{{ . }}">{{ . }}</span>
+                {{ end }}
+              {{ end }}
+            </div>
             <p class="timeline-text">{{ .Summary | plainify | htmlUnescape | truncate 140 }}</p>
           </li>
           {{ end }}
@@ -132,3 +188,4 @@
 </main>
 
 {{ partial "footer.html" . }}
+{{ range site.RegularPages }}{{ .Title }}: {{ .Params.categories }} ({{.RelPermalink}})<br>{{ end }}

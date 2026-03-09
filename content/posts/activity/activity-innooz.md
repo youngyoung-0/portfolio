@@ -2,7 +2,7 @@
 title: "개발팀 · ㈜이노즈"
 date: 2023-09-01
 draft: false
-tags: ["백엔드", "이커머스", "DB설계"]
+tags: ["Company", "백엔드", "이커머스", "DB설계"]
 categories: ["Activities"]
 description: "건강기능식품 이커머스 백오피스 기획 및 백엔드 개발"
 disableLink: true

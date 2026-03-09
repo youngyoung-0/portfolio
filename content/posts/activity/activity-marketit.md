@@ -2,7 +2,7 @@
 title: "인플루언서 플랫폼 개발 · ㈜마켓잇(MarketitInc.)"
 date: 2022-03-01
 draft: false
-tags: ["백엔드", "AWS", "CI/CD", "유지보수"]
+tags: ["Company", "백엔드", "AWS", "CI/CD", "유지보수"]
 categories: ["Activities"]
 description: "광고/마켓 서비스 백엔드 개발 및 레거시 유지 보수"
 disableLink: true

@@ -36,3 +36,31 @@ for (let i = 0; i < navigationLinks.length; i++) {
     window.scrollTo(0, 0);
   });
 }
+
+// Activity Filtering Logic
+const activityFilterBtns = document.querySelectorAll('.activity-filter-btn');
+const activityItems = document.querySelectorAll('.activity-item');
+
+if (activityFilterBtns.length > 0) {
+  activityFilterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Remove active class from all buttons
+      activityFilterBtns.forEach(b => b.classList.remove('active'));
+      // Add active class to clicked button
+      this.classList.add('active');
+
+      const filterValue = this.dataset.filter;
+
+      activityItems.forEach(item => {
+        const itemTags = item.dataset.activityTags ? item.dataset.activityTags.split(',') : [];
+        if (filterValue === 'all') {
+          item.style.display = 'block';
+        } else if (itemTags.includes(filterValue)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+}

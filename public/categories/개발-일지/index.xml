@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>개발 일지 on Portfolio</title>
-    <link>http://localhost:57086/portfolio/categories/%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80/</link>
+    <link>http://localhost:1313/portfolio/categories/%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80/</link>
     <description>Recent content in 개발 일지 on Portfolio</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Wed, 04 Mar 2026 12:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:57086/portfolio/categories/%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/portfolio/categories/%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>나의 첫 번째 트러블슈팅 기록</title>
-      <link>http://localhost:57086/portfolio/posts/first-troubleshooting/</link>
+      <link>http://localhost:1313/portfolio/posts/first-troubleshooting/</link>
       <pubDate>Wed, 04 Mar 2026 12:00:00 +0900</pubDate>
-      <guid>http://localhost:57086/portfolio/posts/first-troubleshooting/</guid>
+      <guid>http://localhost:1313/portfolio/posts/first-troubleshooting/</guid>
       <description>&lt;h2 id=&#34;1-문제-발생&#34;&gt;1. 문제 발생&lt;/h2&gt;&#xA;&lt;p&gt;프로젝트를 설정하던 중 예기치 않은 에러가 발생했습니다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: command not found: hugo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-원인-분석&#34;&gt;2. 원인 분석&lt;/h2&gt;&#xA;&lt;p&gt;정적 사이트 생성기인 Hugo가 개발 환경에 설치되어 있지 않았기 때문입니다. 홈브루(Homebrew)를 통해 간단히 설치할 수 있었습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;3-해결-방법&#34;&gt;3. 해결 방법&lt;/h2&gt;&#xA;&lt;p&gt;다음 명령어를 통해 Hugo를 전역으로 설치했습니다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이후 &lt;code&gt;hugo version&lt;/code&gt; 명령어로 정상 설치 여부를 확인한 뒤, 무사히 프로젝트 생성을 마칠 수 있었습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;4-배운-점&#34;&gt;4. 배운 점&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;개발 환경을 세팅할 때는 필요한 CLI 도구가 로컬에 잘 설치되어 있는지 먼저 확인하는 습관을 들여야겠습니다.&lt;/li&gt;&#xA;&lt;li&gt;환경 구성 시 발생하는 에러 메시지를 당황하지 않고 꼼꼼히 읽으면 원인을 쉽게 파악할 수 있음을 배웠습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
