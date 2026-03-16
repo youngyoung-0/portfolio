@@ -48,7 +48,7 @@
       <link>http://localhost:1313/portfolio/posts/activity/activity-innooz/</link>
       <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/portfolio/posts/activity/activity-innooz/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;건강기능식품 이커머스 플랫폼 서비스 DB 설계와 백오피스 백엔드 개발을 전담했습니다.&lt;/li&gt;&#xA;&lt;li&gt;이커머스 상품 주문 취소 및 환불 로직 구현.&lt;/li&gt;&#xA;&lt;li&gt;송장 일괄 등록 및 상품 일괄 엑셀 등록 개발 등을 책임져 왔습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;h2 id=&#34;-프로젝트-개요&#34;&gt;📝 프로젝트 개요&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;린미&lt;/strong&gt;는 건강기능식품 전문 이커머스 플랫폼이었습니다.&lt;br&gt;&#xA;처음엔 “이커머스면 비슷하지 않을까?” 싶었지만, 도메인을 파고들수록 일반 상품과는 결이 많이 달랐습니다. 성분 구성, 섭취 방법, 병용 주의사항 등 상품마다 챙겨야 할 정보가 제각각이었고, &lt;strong&gt;약사 자문을 바탕으로 데이터 구조를 잡아가는 과정&lt;/strong&gt;이 낯설지만 흥미로웠습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-문제-상품-데이터는-rdb-단일-스키마로-버티기-어려웠다&#34;&gt;😭 문제: 상품 데이터는 RDB 단일 스키마로 버티기 어려웠다&lt;/h2&gt;&#xA;&lt;p&gt;상품 데이터를 RDB 하나로 관리하려다 보니 구조적인 문제가 드러났습니다.&lt;br&gt;&#xA;건강기능식품은 &lt;strong&gt;상품 유형마다 필요한 정보의 형태가 달라서&lt;/strong&gt;, 단일 스키마로 억지로 맞추면 &lt;code&gt;NULL&lt;/code&gt; 컬럼이 계속 늘어나는 구조가 되었습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>인플루언서 플랫폼 개발 · ㈜마켓잇(MarketitInc.)</title>
