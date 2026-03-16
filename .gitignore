@@ -1,30 +1,35 @@
-# Generated files by hugo
+## Hugo 생성 산출물
 /public/
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json
 .hugo_build.lock
+hugo.log
 
-# Executable may be added to repository
+## Hugo 캐시 & 임시 (혹시 생길 경우)
+/.hugo_cache/
+/.hugo/
+
+## 실행 파일 (OS별 Hugo 바이너리)
 hugo.exe
 hugo.darwin
 hugo.linux
 
-# Node.js dependencies
+## Node.js 의존성
 node_modules/
 
-# Mac OS
+## macOS
 .DS_Store
 .AppleDouble
 .LSOverride
 Icon
 
-# Thumbnails
+## 썸네일/시스템 파일
 ._*
 .Spotlight-V100
 .Trashes
 
-# IDE & Editor
+## IDE & Editor 설정/캐시
 .idea/
 .vscode/
 *.swp
@@ -32,9 +37,8 @@ Icon
 .cursorignore
 .cursorindexingignore
 
-# Python (in case parsing scripts are used)
+## Python (툴/스크립트 사용 대비)
 __pycache__/
 *.pyc
 .venv/
 venv/
-hugo.log

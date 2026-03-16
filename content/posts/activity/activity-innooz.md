@@ -6,6 +6,7 @@ tags: ["Company", "백엔드", "이커머스", "DB설계"]
 categories: ["Activities"]
 description: "건강기능식품 이커머스 백오피스 기획 및 백엔드 개발"
 disableLink: false
+period: "2023.09 - 2024.09"
 ---
 
 ## 📝 프로젝트 개요

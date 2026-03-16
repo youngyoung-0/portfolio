@@ -135,7 +135,11 @@
               {{ end }}
             </h4>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span>{{ .Date.Format "2006. 01" }}</span>
+              {{ if .Params.period }}
+                <span>{{ .Params.period }}</span>
+              {{ else }}
+                <span>{{ .Date.Format "2006. 01" }}</span>
+              {{ end }}
               {{ range .Params.tags }}
                 {{ if or (eq . "Education") (eq . "Award") (eq . "Company") }}
                   <span class="activity-tag activity-tag-{{ . }}">{{ . }}</span>
