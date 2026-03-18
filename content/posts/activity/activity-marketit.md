@@ -5,6 +5,7 @@ draft: false
 tags: ["Company", "백엔드", "AWS", "CI/CD", "유지보수"]
 categories: ["Activities"]
 description: "광고/마켓 서비스 백엔드 개발 및 레거시 유지 보수"
+thumbnail: "/assets/images/activity_post_image/marketit_1.jpg" # showcase 대표 이미지 예시
 disableLink: false
 period: "2022.03 - 2023.08"
 ---
@@ -18,3 +19,5 @@ period: "2022.03 - 2023.08"
 
 - 레거시 프로젝트의 유지 보수 및 안정적 운영 책임, 기존 시스템의 이슈 해결에 주력.
 - 반복되는 데이터 요청 업무를 단순화하기 위해 Redash를 활용하여 데이터 관련 작업의 효율성 개선.
+
+![marketit_2](/assets/images/activity_post_image/marketit_1.jpg)

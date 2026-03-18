@@ -5,6 +5,7 @@ draft: false
 tags: ["Company", "DB설계", "ERD", "Node.js", "Firebase"]
 categories: ["Activities"]
 description: "소품 공유 및 중고 가전 거래 서비스 백엔드 및 DB 구축"
+thumbnail: "/assets/images/blog-3.jpg" # showcase 대표 이미지 예시
 disableLink: true
 period: "2021.09 - 2022.02"
 ---

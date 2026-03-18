@@ -1,0 +1,43 @@
+{{ partial "header.html" . }}
+
+<main class="showcase-main showcase-single-main">
+  <header class="showcase-floating-nav">
+    <a href="{{ "showcase/" | relURL }}" class="showcase-brand">{{ site.Params.author }}</a>
+    <nav class="showcase-nav">
+      <a href="{{ "showcase/" | relURL }}#work">Work</a>
+      <a href="{{ "posts/" | relURL }}">Blog</a>
+    </nav>
+  </header>
+
+  <article class="showcase-single reveal">
+    <p class="showcase-meta">{{ .Params.period }} · {{ .Params.role }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="showcase-summary">{{ .Params.summary }}</p>
+
+    {{ with .Params.thumbnail }}
+    <img class="showcase-single-thumb" src="{{ . | relURL }}" alt="{{ $.Title }} 썸네일" loading="lazy">
+    {{ end }}
+
+    <div class="showcase-chip-row">
+      {{ range .Params.stack }}
+      <span class="showcase-chip">{{ . }}</span>
+      {{ end }}
+    </div>
+
+    {{ with .Params.impact }}
+    <p class="showcase-impact"><strong>Impact.</strong> {{ . }}</p>
+    {{ end }}
+
+    <section class="showcase-single-content">
+      {{ .Content }}
+    </section>
+
+    <div class="showcase-link-row">
+      {{ with .Params.demoUrl }}<a class="showcase-btn showcase-btn-primary" href="{{ . }}" target="_blank" rel="noopener noreferrer">Demo</a>{{ end }}
+      {{ with .Params.repoUrl }}<a class="showcase-btn showcase-btn-ghost" href="{{ . }}" target="_blank" rel="noopener noreferrer">Repository</a>{{ end }}
+      {{ with .Params.externalUrl }}<a class="showcase-btn showcase-btn-ghost" href="{{ . }}" target="_blank" rel="noopener noreferrer">External</a>{{ end }}
+    </div>
+  </article>
+</main>
+
+{{ partial "footer.html" . }}

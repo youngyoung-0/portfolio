@@ -23,6 +23,9 @@
 
     <link rel="shortcut icon" href="{{ "assets/images/logo.ico" | relURL }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ "assets/css/style.css" | relURL }}">
+    {{ if eq .Section "showcase" }}
+    <link rel="stylesheet" href="{{ "assets/css/showcase.css" | relURL }}">
+    {{ end }}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,4 +37,4 @@
     {{ end }}
 </head>
 
-<body>
+<body{{ if eq .Section "showcase" }} class="showcase-page"{{ end }}>

@@ -102,5 +102,144 @@
   - 404 에러 리소스(이미지 등) 파악
   - `sitemap.xml` 및 SEO OG태그 정상 노출 체크
 
-## 5. 피드백 요청 (Next Steps)
-위의 Vercel 기준 배포 계획을 확인하시고, 실제 Vercel 연동을 진행할까요? Vercel 계정이 없으시다면 회원가입 후 GitHub 연동을 진행해 주시면 됩니다.
+## 5. 레퍼런스 기반 확장 기획 (블로그 유지 + 포트폴리오 웹 추가)
+
+아래 확장안은 기존 블로그 구조(`/`, `/posts/`)를 그대로 유지하면서, 레퍼런스 사이트([Figma Site](https://blanch-coach-12976307.figma.site/))의 톤과 레이아웃 패턴을 신규 섹션(`/showcase/`)으로 분리 도입하는 것을 목표로 합니다.
+
+### 5-1. 핵심 방향성
+- **분리 전략**: 블로그는 기존 vCard 테마 유지, 포트폴리오는 별도 템플릿/스타일로 분리
+- **디자인 키워드**: 라이트 톤, 큰 프로젝트 비주얼, 플로팅 네비게이션, 강한 카드 중심 레이아웃
+- **콘텐츠 키워드**: Work 중심 케이스 스터디 + Side Project(실험/MVP) 강조
+- **운영 키워드**: 모든 프로젝트를 Markdown으로 관리하여 유지보수 단순화
+
+### 5-2. 정보 구조 (IA) 및 URL 설계
+- 기존 유지
+  - `/`: 블로그형 홈(vCard)
+  - `/posts/`: 블로그 목록/상세
+- 신규 추가
+  - `/showcase/`: 포트폴리오 메인(대표 프로젝트 중심)
+  - `/showcase/{slug}/`: 프로젝트 상세(케이스 스터디)
+- 메뉴
+  - 상단 메뉴에 `Portfolio` 항목 추가하여 `/showcase/`로 진입
+  - 블로그 동선(`Blog`, `Tags`)은 그대로 유지
+
+### 5-3. 화면 구성 (레퍼런스 반영)
+1. **Floating Header**
+   - 반투명(blur) 네비게이션 바
+   - `Work`, `Resume`, `LinkedIn`, `GitHub` 액션 링크 배치
+2. **Hero Intro**
+   - 한 줄 소개 + 포지션/강점 요약
+   - CTA 버튼 2개(`대표 프로젝트 보기`, `블로그 보기`)
+3. **Featured Works**
+   - 대표 프로젝트를 큰 카드로 노출
+   - 썸네일, 기간, 역할, 문제 정의 한 줄을 우선 표시
+4. **Work List (Alternating Layout)**
+   - 카드가 좌/우 교차 배치되도록 구성
+   - 각 카드 클릭 시 상세 페이지 이동
+5. **Side Projects with AI**
+   - 작은 카드 그리드로 실험성 프로젝트 노출
+   - 외부 URL 또는 데모 링크로 즉시 이동 가능
+6. **Bottom CTA**
+   - 연락/협업 유도 문구 + 이력서/깃허브 링크
+
+### 5-4. 콘텐츠 모델 (Front Matter 스키마)
+- 공통 필드
+  - `title`, `date`, `period`, `role`, `summary`, `thumbnail`, `featured`, `order`
+- 분류 필드
+  - `portfolioType`: `work` 또는 `side-project`
+- 링크 필드
+  - `demoUrl`, `repoUrl`, `caseUrl`, `externalUrl`
+- 성과 필드(선택)
+  - `problem`, `hypothesis`, `action`, `result`, `impact`
+- 표기 필드(선택)
+  - `stack`(배열), `badge`, `accent`
+
+### 5-5. 구현 구조 (Hugo 파일 단위)
+- 콘텐츠
+  - `content/showcase/_index.md`
+  - `content/showcase/*.md` (프로젝트별 페이지)
+- 템플릿
+  - `layouts/showcase/list.html` (포트폴리오 메인)
+  - `layouts/showcase/single.html` (프로젝트 상세)
+- 스타일/스크립트
+  - `static/assets/css/showcase.css`
+  - `static/assets/js/showcase.js`
+- 설정
+  - `hugo.toml` 메뉴에 `Portfolio` 추가
+  - `hugo.toml`에 `params.showcase`(resume/linkedin 등) 추가
+
+### 5-6. 인터랙션/모션 가이드
+- 스크롤 진입 시 카드 `fade-up` 애니메이션
+- 카드 hover 시 이미지 확대, 그림자 강화
+- 상단 플로팅 헤더는 스크롤에 따라 blur/그림자 변화
+- `prefers-reduced-motion` 사용자를 위한 애니메이션 축소 처리
+
+### 5-7. 반응형/접근성 가이드
+- 모바일 우선 설계 (단일 컬럼, 터치 영역 44px 이상)
+- 데스크톱에서만 좌우 교차 레이아웃 적용
+- 링크/버튼 명확한 포커스 스타일 제공
+- 모든 프로젝트 썸네일에 의미 있는 `alt` 부여
+
+### 5-8. 검증 기준 (Acceptance Criteria)
+- 기존 블로그(` /, /posts/, /tags/ `) 회귀 이슈가 없어야 함
+- `/showcase/`에서 Work/Side Project 카드가 정상 분리 렌더링
+- 각 프로젝트 링크(내부/외부)가 의도대로 작동
+- 모바일/태블릿/데스크톱에서 레이아웃 깨짐이 없어야 함
+- 기본 SEO(`title`, `description`, `og`)가 페이지별로 정상 출력
+
+### 5-9. 작업 순서 (Execution Order)
+1. `plan.md` 확장안 확정
+2. `hugo.toml` 메뉴/파라미터 확장
+3. `/showcase` 템플릿 및 콘텐츠 스키마 반영
+4. 전용 CSS/JS 구현 및 인터랙션 연결
+5. 샘플 프로젝트 콘텐츠 입력
+6. `hugo` 빌드 및 회귀 점검
+
+## 6. 피드백 요청 (Next Steps)
+위 확장 기획대로 `/showcase` 구현을 먼저 완료한 뒤, 2차로 프로젝트 실데이터(썸네일/성과지표/외부링크)를 채워 품질을 높이는 방식으로 진행합니다.
+
+## 7. 실제 반영 완료 사항 (2026-03 기준)
+
+아래 항목은 현재 코드에 반영된 **최신 구현 상태**입니다.  
+(초기 기획의 일부 항목은 사용자 피드백에 따라 단순화/변경됨)
+
+### 7-1. Showcase 데이터 소스 정책
+- `/showcase`는 `content/showcase` 샘플 문서를 사용하지 않고, **기존 `content/posts` 문서**를 기반으로 렌더링
+- 노출 기준은 카테고리 필터 방식:
+  - `hugo.toml`의 `params.showcase.sourceCategories` 값과 `posts` 문서의 `categories`를 매칭
+  - 기본 반영값: `["Activities"]`
+
+### 7-2. Showcase 화면 정책 (단순화 버전)
+- 상단 메뉴바 제거
+- `title`, `Projects` 텍스트 제거
+- CTA(`대표 프로젝트 보기`, `블로그 보기`) 제거
+- 페이지 진입 시 **포트폴리오 카드 리스트만 바로 노출**
+
+### 7-3. 대표 이미지(Thumbnail) 정책
+- 카드 대표 이미지 우선순위:
+  1. `thumbnail`
+  2. `cover.image`
+  3. 본문 첫 번째 마크다운 이미지
+  4. 기본 이미지 (`/assets/images/blog-6.jpg`)
+- Front Matter 권장 예시:
+  ```yaml
+  thumbnail: "/assets/images/your-image.jpg"
+  ```
+- 경로는 GitHub Pages의 `/portfolio` 베이스 경로를 고려해 렌더링 시 자동 보정
+
+### 7-4. 시각/스타일 정책
+- `/showcase` 배경을 기존 블로그와 동일한 다크 톤으로 통일
+- 카드/텍스트 색상도 다크 테마 기준으로 맞춤 적용
+- 링크 방문 후 색 변화 방지:
+  - `link / visited / hover / active / focus-visible` 상태를 동일 스타일로 고정
+
+### 7-5. 카드 레이아웃 정렬 정책
+- 데스크톱에서 카드 폭 비율 고정
+- 카드 최소 높이(min-height) 적용
+- 썸네일 영역 높이 고정
+- 본문 요약 줄 수 제한(클램프) + 태그 하단 정렬
+- 모바일에서는 단일 컬럼 + 썸네일 16:9 비율 유지
+
+### 7-6. 운영 가이드
+- 포트폴리오로 노출할 글은 `content/posts`에서 카테고리를 `sourceCategories`와 맞추어 작성
+- 대표 이미지는 각 포스트 Front Matter에 `thumbnail`을 넣는 방식을 표준으로 사용

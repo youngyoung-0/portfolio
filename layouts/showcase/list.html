@@ -1,0 +1,83 @@
+{{ partial "header.html" . }}
+
+{{ $sourceCategories := site.Params.showcase.sourceCategories | default (slice "Activities") }}
+{{ $postPages := where site.RegularPages "Section" "posts" }}
+{{ $portfolioPages := where $postPages "Params.categories" "intersect" $sourceCategories }}
+
+<main class="showcase-main">
+  <section class="showcase-section" id="portfolio-list">
+    <div class="showcase-case-list">
+      {{ if gt (len $portfolioPages) 0 }}
+      {{ range $index, $item := ($portfolioPages.ByDate.Reverse) }}
+      {{ $imageScratch := newScratch }}
+      {{ $imageScratch.Set "thumb" ($item.Params.thumbnail | default "") }}
+
+      {{ if eq ($imageScratch.Get "thumb") "" }}
+        {{ with $item.Params.cover }}
+          {{ with .image }}
+            {{ $imageScratch.Set "thumb" . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      {{ if eq ($imageScratch.Get "thumb") "" }}
+        {{ $matches := findRESubmatch `!\[[^\]]*\]\(([^)\s]+)` $item.RawContent 1 }}
+        {{ if gt (len $matches) 0 }}
+          {{ $first := index $matches 0 }}
+          {{ if gt (len $first) 1 }}
+            {{ $imageScratch.Set "thumb" (index $first 1) }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      {{ $thumbRaw := ($imageScratch.Get "thumb") | default "/assets/images/blog-6.jpg" }}
+      {{ $thumbPath := strings.TrimPrefix "./" $thumbRaw }}
+      {{ $thumb := $thumbPath }}
+      {{ if not (or (hasPrefix $thumbPath "http://") (hasPrefix $thumbPath "https://") (hasPrefix $thumbPath "/")) }}
+        {{ $thumb = printf "%s%s" $item.RelPermalink $thumbPath }}
+      {{ end }}
+      {{ $thumbURL := $thumb }}
+      {{ if hasPrefix $thumb "http://" }}
+        {{ $thumbURL = $thumb }}
+      {{ else if hasPrefix $thumb "https://" }}
+        {{ $thumbURL = $thumb }}
+      {{ else if hasPrefix $thumb "/" }}
+        {{ $thumbURL = (strings.TrimPrefix "/" $thumb) | relURL }}
+      {{ else }}
+        {{ $thumbURL = $thumb | relURL }}
+      {{ end }}
+
+      <article class="showcase-case-card reveal {{ if eq (mod $index 2) 1 }}reverse{{ end }}">
+        <a class="showcase-case-thumb" href="{{ if $item.Params.externalUrl }}{{ $item.Params.externalUrl }}{{ else }}{{ $item.RelPermalink }}{{ end }}" {{ if $item.Params.externalUrl }}target="_blank" rel="noopener noreferrer"{{ end }}>
+          <img src="{{ $thumbURL }}" alt="{{ $item.Title }} 미리보기" loading="lazy">
+        </a>
+        <div class="showcase-case-content">
+          <p class="showcase-meta">
+            {{ with $item.Params.period }}{{ . }}{{ else }}{{ $item.Date.Format "2006.01" }}{{ end }}
+          </p>
+          <h3><a href="{{ if $item.Params.externalUrl }}{{ $item.Params.externalUrl }}{{ else }}{{ $item.RelPermalink }}{{ end }}" {{ if $item.Params.externalUrl }}target="_blank" rel="noopener noreferrer"{{ end }}>{{ $item.Title }}</a></h3>
+          <p>{{ $item.Description | default ($item.Summary | plainify | htmlUnescape | truncate 140) }}</p>
+          {{ with $item.Params.tags }}
+          <div class="showcase-chip-row">
+            {{ range first 4 . }}
+            <span class="showcase-chip">{{ . }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+      {{ else }}
+      <article class="showcase-case-card reveal">
+        <div class="showcase-case-content">
+          <p class="showcase-meta">No Portfolio Content</p>
+          <h3>표시할 프로젝트가 없습니다</h3>
+          <p>`content/posts` 문서의 `categories`에 {{ delimit $sourceCategories ", " }} 중 하나를 추가하면 이 페이지에 표시됩니다.</p>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+</main>
+
+{{ partial "footer.html" . }}

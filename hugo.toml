@@ -29,6 +29,14 @@ title = 'Portfolio'
     { name = "Blog Posts", url = "/posts/" }
   ]
 
+[params.showcase]
+  title = ""
+  subtitle = "기획 의도를 코드로 연결하고, 실험 가능한 MVP를 빠르게 만들어 학습합니다."
+  resumeUrl = "https://example.com/resume"
+  linkedinUrl = "https://www.linkedin.com"
+  githubUrl = "https://github.com/youngyoung-0"
+  sourceCategories = ["Activities"]
+
 [taxonomies]
   category = "categories"
   tag = "tags"
@@ -41,8 +49,12 @@ title = 'Portfolio'
     url = "/posts/"
     weight = 10
   [[menu.main]]
+    identifier = "portfolio"
+    name = "Portfolio"
+    url = "/showcase/"
+    weight = 20
+  [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
     weight = 40
-
