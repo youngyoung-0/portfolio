@@ -44,7 +44,7 @@
       {{ else if hasPrefix $thumb "/" }}
         {{ $thumbURL = $thumb | relURL }}
       {{ else }}
-        {{ $thumbURL = (printf "/%s" $thumb) | relURL }}
+        {{ $thumbURL = $thumb | absURL }}
       {{ end }}
 
       <article class="showcase-case-card reveal {{ if eq (mod $index 2) 1 }}reverse{{ end }}">
