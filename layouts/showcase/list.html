@@ -42,9 +42,9 @@
       {{ else if hasPrefix $thumb "https://" }}
         {{ $thumbURL = $thumb }}
       {{ else if hasPrefix $thumb "/" }}
-        {{ $thumbURL = (strings.TrimPrefix "/" $thumb) | relURL }}
-      {{ else }}
         {{ $thumbURL = $thumb | relURL }}
+      {{ else }}
+        {{ $thumbURL = (printf "/%s" $thumb) | relURL }}
       {{ end }}
 
       <article class="showcase-case-card reveal {{ if eq (mod $index 2) 1 }}reverse{{ end }}">

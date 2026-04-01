@@ -1,5 +1,7 @@
 {{ $url := .Destination }}
-{{ if strings.HasPrefix $url "/" }}
-  {{ $url = strings.TrimPrefix "/" $url }}
+{{ if not (strings.HasPrefix $url "http") }}
+  {{ if not (strings.HasPrefix $url "/") }}
+    {{ $url = printf "/%s" $url }}
+  {{ end }}
 {{ end }}
 <img src="{{ $url | relURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} />

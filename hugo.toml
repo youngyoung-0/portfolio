@@ -1,4 +1,4 @@
-baseURL = 'https://youngyoung-0.github.io/portfolio/'
+baseURL = 'https://protfolio.taylor00.com/'
 languageCode = 'ko-kr'
 title = 'Portfolio'
 
@@ -21,7 +21,7 @@ title = 'Portfolio'
   email = "taeyoung6873@gmail.com"
   location = "Seoul, South Korea"
   github = "github.com/youngyoung-0"
-  imageUrl = "assets/images/profile_image_1.JPG"
+  imageUrl = "/assets/images/profile_image_1.JPG"
   imageWidth = 120
   imageHeight = 120
   imageTitle = "my image"
