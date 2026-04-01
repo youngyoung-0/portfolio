@@ -1,7 +1,8 @@
 {{ $url := .Destination }}
-{{ if not (strings.HasPrefix $url "http") }}
-  {{ if not (strings.HasPrefix $url "/") }}
-    {{ $url = printf "/%s" $url }}
-  {{ end }}
+{{ $resolved := $url }}
+{{ if or (strings.HasPrefix $url "http://") (strings.HasPrefix $url "https://") }}
+  {{ $resolved = $url }}
+{{ else }}
+  {{ $resolved = strings.TrimPrefix "/" $url | relURL }}
 {{ end }}
-<img src="{{ $url | relURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} />
+<img src="{{ $resolved }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} />

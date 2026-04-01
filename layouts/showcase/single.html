@@ -15,7 +15,7 @@
     <p class="showcase-summary">{{ .Params.summary }}</p>
 
     {{ with .Params.thumbnail }}
-    <img class="showcase-single-thumb" src="{{ . | relURL }}" alt="{{ $.Title }} 썸네일" loading="lazy">
+    <img class="showcase-single-thumb" src="{{ strings.TrimPrefix "/" . | relURL }}" alt="{{ $.Title }} 썸네일" loading="lazy">
     {{ end }}
 
     <div class="showcase-chip-row">

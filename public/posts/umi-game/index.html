@@ -21,14 +21,14 @@
     <meta name="twitter:title" content="UMI — LLM 기반 인터랙티브 게임 백엔드 - Portfolio">
     <meta name="twitter:description" content="사이비 종교 세계관을 배경으로, LLM 페르소나의 안정성을 실증적으로 검증한 인터랙티브 게임 &#39;UMI&#39;의 백엔드 개발기">
 
-    <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" href="http://localhost:1313/portfolio/assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://localhost:1313/portfolio/assets/css/style.css">
     
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="stylesheet" href="http://localhost:1313/portfolio/assets/css/syntax.css">
     
 </head>
 
@@ -40,7 +40,7 @@
   <div class="sidebar-info">
     <figure class="avatar-box">
       
-      <img src="/assets/images/profile_image_1.JPG" alt="Young" width="80">
+      <img src="/portfolio/assets/images/profile_image_1.JPG" alt="Young" width="80">
       
     </figure>
 
@@ -181,9 +181,10 @@
 <p>세계관으로는 <strong>사이비 종교</strong>를 선택했습니다. 외부와 단절된 폐쇄 환경에서 대화·심리에 집중할 수 있고, 비이성적인 가치관과 &lsquo;생존과 탈출&rsquo;이라는 명확한 목표가 유저의 몰입감을 극대화할 수 있다고 생각했습니다.</p>
 <p>
 
+
   
 
-<img src="/assets/images/umi-game-page/1F_outside01.png" alt="thumbnail"  />
+<img src="/portfolio/assets/images/umi-game-page/1F_outside01.png" alt="thumbnail"  />
 </p>
 <hr>
 <h2 id="-나의-주요-역할-및-기여">👨‍💻 나의 주요 역할 및 기여</h2>
@@ -209,9 +210,10 @@
 </ol>
 <p>
 
+
   
 
-<img src="/assets/images/umi-game-page/ai-agent-flow.png" alt="AI 에이전트 흐름도"  />
+<img src="/portfolio/assets/images/umi-game-page/ai-agent-flow.png" alt="AI 에이전트 흐름도"  />
 </p>
 <h3 id="기술-스택">기술 스택</h3>
 <table>
@@ -256,27 +258,30 @@
 Llama-3, Mistral, Gemma-2 구조를 비교했을 때 <code>Gemma-2-9b-it</code>가 반응 반응 속도 대비 자연스러운 한국어 티키타카를 가장 잘 보여주었습니다. 처음엔 PEFT(LoRA) 기법을 사용했으나 사이비 종교라는 독특한 세계관을 이탈하는 문제가 발생해, GPT-4o mini로 자체 구축한 대화 데이터를 이용해 <strong>SFT(Supervised Fine-Tuning)</strong> 를 전체 학습시켜 일관성 있는 사이코패스 페르소나를 확보했습니다.</p>
 <p>
 
+
   
 
-<img src="/assets/images/umi-game-page/gemma-2-9b-it.png" alt="gemma-2-9b-it"  />
+<img src="/portfolio/assets/images/umi-game-page/gemma-2-9b-it.png" alt="gemma-2-9b-it"  />
 </p>
 <h3 id="2-guardrail-safety--bert-base-multilingual-cased">2. Guardrail (Safety) — bert-base-multilingual-cased</h3>
 <p>유저가 NPC에게 도를 넘는 욕설을 하거나 시스템 탈옥(Jailbreak) 프롬프트를 입력하는 것을 걸러내는 보안 필터입니다.
 분류 및 이상 감지에 처리 속도가 매우 빠르고 가벼워야 했기 때문에 <code>BERT</code> 아키텍처를 선택했습니다. AI 허브의 &lsquo;텍스트 윤리 검증&rsquo; 데이터셋으로 파인튜닝을 거쳐 높은 F1-score를 확보했습니다. (해당 봇에 3회 적발 시 게임 내에서 하루를 강제로 날려버리는 패널티가 발생합니다.)</p>
 <p>
 
+
   
 
-<img src="/assets/images/umi-game-page/bert-base-multilingual-cased.png" alt="bert-base-multilingual-cased"  />
+<img src="/portfolio/assets/images/umi-game-page/bert-base-multilingual-cased.png" alt="bert-base-multilingual-cased"  />
 </p>
 <h3 id="3-story-agent--qwen-7b">3. Story Agent — Qwen-7b</h3>
 <p>게임 내 세션(하루)이 끝날 때, 그동안의 방대한 대화 로그를 압축하여 핵심 사건으로 요약하는 역할을 담당합니다.
 장문(Long-context) 입력 환경에서의 주요 인과관계 도출 능력을 측정했을 때, <code>Qwen-7B</code>가 Llama 계열 모델보다 환각(Hallucination) 현상이 적고 어휘 표현력이 풍부하여 수많은 히스토리를 가장 완벽하게 요약해냈습니다.</p>
 <p>
 
+
   
 
-<img src="/assets/images/umi-game-page/qwen-7b.jpg" alt="qwen-7b"  />
+<img src="/portfolio/assets/images/umi-game-page/qwen-7b.jpg" alt="qwen-7b"  />
 </p>
 <hr>
 <h2 id="-게임-플레이-사이클">🎮 게임 플레이 사이클</h2>
@@ -290,9 +295,10 @@ Llama-3, Mistral, Gemma-2 구조를 비교했을 때 <code>Gemma-2-9b-it</code>�
 </ul>
 <p>
 
+
   
 
-<img src="/assets/images/umi-game-page/umi_play_cycle.png" alt="플레이 사이클"  />
+<img src="/portfolio/assets/images/umi-game-page/umi_play_cycle.png" alt="플레이 사이클"  />
 </p>
 <hr>
 <h2 id="-게임-시연-영상">🎥 게임 시연 영상</h2>
@@ -317,9 +323,10 @@ Llama-3, Mistral, Gemma-2 구조를 비교했을 때 <code>Gemma-2-9b-it</code>�
 </ul>
 <p>
 
+
   
 
-<img src="/assets/images/umi-game-page/B3_hall01.png" alt="UMI 게임 플레이 화면"  />
+<img src="/portfolio/assets/images/umi-game-page/B3_hall01.png" alt="UMI 게임 플레이 화면"  />
 </p>
 
         </section>

@@ -34,7 +34,7 @@
         <ul class="service-list">
           <li class="service-item">
             <div class="service-icon-box">
-              <img src="{{ "assets/images/icon-design.svg" | absURL }}" alt="design icon" width="40">
+              <img src="{{ "assets/images/icon-design.svg" | relURL }}" alt="design icon" width="40">
             </div>
             <div class="service-content-box">
               <h4 class="h4 service-item-title">System Architecture</h4>
@@ -44,7 +44,7 @@
 
           <li class="service-item">
             <div class="service-icon-box">
-              <img src="{{ "assets/images/icon-dev.svg" | absURL }}" alt="Web development icon" width="40">
+              <img src="{{ "assets/images/icon-dev.svg" | relURL }}" alt="Web development icon" width="40">
             </div>
             <div class="service-content-box">
               <h4 class="h4 service-item-title">Web development</h4>
@@ -54,7 +54,7 @@
 
           <li class="service-item">
             <div class="service-icon-box">
-              <img src="{{ "assets/images/icon-app.svg" | absURL }}" alt="mobile app icon" width="40">
+              <img src="{{ "assets/images/icon-app.svg" | relURL }}" alt="mobile app icon" width="40">
             </div>
             <div class="service-content-box">
               <h4 class="h4 service-item-title">Engineering notes</h4>
@@ -176,13 +176,57 @@
             {{ if and (lt ($scratch.Get "count") 4) (not (in .Params.categories "Activities")) }}
             <li class="blog-post-item blog-card">
               <a href="{{ .RelPermalink }}">
-                <div class="blog-meta">
-                  <span>{{ if .Params.categories }}{{ index .Params.categories 0 }}{{ else }}Post{{ end }}</span>
-                  <span class="dot"></span>
-                  <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+                {{ $imageScratch := newScratch }}
+                {{ $imageScratch.Set "thumb" (.Params.thumbnail | default "") }}
+
+                {{ if eq ($imageScratch.Get "thumb") "" }}
+                  {{ with .Params.cover }}
+                    {{ with .image }}
+                      {{ $imageScratch.Set "thumb" . }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+
+                {{ if eq ($imageScratch.Get "thumb") "" }}
+                  {{ $matches := findRESubmatch `!\[[^\]]*\]\(([^)\s]+)` .RawContent 1 }}
+                  {{ if gt (len $matches) 0 }}
+                    {{ $first := index $matches 0 }}
+                    {{ if gt (len $first) 1 }}
+                      {{ $imageScratch.Set "thumb" (index $first 1) }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+
+                {{ $thumbRaw := ($imageScratch.Get "thumb") | default "/assets/images/blog-6.jpg" }}
+                {{ $thumbPath := strings.TrimPrefix "./" $thumbRaw }}
+                {{ $thumb := $thumbPath }}
+                {{ if not (or (hasPrefix $thumbPath "http://") (hasPrefix $thumbPath "https://") (hasPrefix $thumbPath "/")) }}
+                  {{ $thumb = printf "%s%s" .RelPermalink $thumbPath }}
+                {{ end }}
+                {{ $thumbURL := $thumb }}
+                {{ if hasPrefix $thumb "http://" }}
+                  {{ $thumbURL = $thumb }}
+                {{ else if hasPrefix $thumb "https://" }}
+                  {{ $thumbURL = $thumb }}
+                {{ else if hasPrefix $thumb "/" }}
+                  {{ $thumbURL = (strings.TrimPrefix "/" $thumb) | relURL }}
+                {{ else }}
+                  {{ $thumbURL = $thumb | absURL }}
+                {{ end }}
+
+                <figure class="blog-banner-box">
+                  <img src="{{ $thumbURL }}" alt="{{ .Title }} 썸네일" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <span>{{ if .Params.categories }}{{ index .Params.categories 0 }}{{ else }}Post{{ end }}</span>
+                    <span class="dot"></span>
+                    <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">{{ .Title }}</h3>
+                  <p class="blog-text">{{ .Summary | plainify | htmlUnescape | truncate 150 }}</p>
                 </div>
-                <h3 class="h3 blog-item-title">{{ .Title }}</h3>
-                <p class="blog-text">{{ .Summary | plainify | htmlUnescape | truncate 150 }}</p>
               </a>
             </li>
             {{ $scratch.Set "count" (add ($scratch.Get "count") 1) }}

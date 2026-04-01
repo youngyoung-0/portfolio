@@ -42,7 +42,7 @@
       {{ else if hasPrefix $thumb "https://" }}
         {{ $thumbURL = $thumb }}
       {{ else if hasPrefix $thumb "/" }}
-        {{ $thumbURL = $thumb | relURL }}
+        {{ $thumbURL = (strings.TrimPrefix "/" $thumb) | relURL }}
       {{ else }}
         {{ $thumbURL = $thumb | absURL }}
       {{ end }}

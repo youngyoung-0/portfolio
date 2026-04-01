@@ -1,6 +1,6 @@
-<script src="{{ "assets/js/script.js" | absURL }}"></script>
+<script src="{{ printf "%sassets/js/script.js" site.BaseURL }}"></script>
 {{ if eq .Section "showcase" }}
-<script src="{{ "assets/js/showcase.js" | absURL }}"></script>
+<script src="{{ printf "%sassets/js/showcase.js" site.BaseURL }}"></script>
 {{ end }}
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
