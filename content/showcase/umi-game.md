@@ -6,6 +6,13 @@ tags: ["Project", "UMI", "LLM", "게임", "멀티에이전트", "FastAPI", "RAG"
 categories: ["Activities"]
 description: "사이비 종교 세계관을 배경으로, LLM 페르소나의 안정성을 실증적으로 검증한 인터랙티브 게임 'UMI'의 백엔드 개발기"
 thumbnail: "/assets/images/umi-game-page/1F_outside01.png" # showcase 대표 이미지
+period: "2026.01 - 2026.02"
+role: "Backend & AI Architect"
+summary: "사이비 종교 세계관을 배경으로, LLM 페르소나의 안정성을 실증적으로 검증한 인터랙티브 게임 'UMI'의 백엔드 개발기"
+stack: ["FastAPI", "Gemma-2", "Qwen", "BERT", "Docker", "AWS EC2", "asyncio"]
+impact: "Guardrail 모델 최적화 및 비동기 멀티 에이전트 설계로 API 레이턴시 대폭 개선"
+demoUrl: "https://youtu.be/kBFtGbRGuVI"
+repoUrl: "https://github.com/youngyoung-0"
 ---
 
 ## 프로젝트 개요

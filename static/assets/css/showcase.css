@@ -68,14 +68,15 @@
   display: inline-flex;
   padding: 6px 12px;
   border-radius: 999px;
-  background: #171719;
-  color: #fff;
+  background: var(--eerie-black-2);
+  color: var(--white-1);
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 14px;
 }
 
 .showcase-page .showcase-hero h1 {
+  font-family: var(--ff-space-grotesk);
   font-size: clamp(32px, 4vw, 52px);
   line-height: 1.18;
   letter-spacing: -0.03em;
@@ -129,6 +130,7 @@
 
 .showcase-page .showcase-section-head h2 {
   color: var(--white-2);
+  font-family: var(--ff-space-grotesk);
   font-size: clamp(24px, 3vw, 34px);
   letter-spacing: -0.02em;
 }
@@ -157,8 +159,7 @@
 
 .showcase-page .showcase-featured-card img,
 .showcase-page .showcase-case-thumb img,
-.showcase-page .showcase-side-card img,
-.showcase-page .showcase-single-thumb {
+.showcase-page .showcase-side-card img {
   width: 100%;
   display: block;
   object-fit: cover;
@@ -185,6 +186,7 @@
 .showcase-page .showcase-case-content h3,
 .showcase-page .showcase-single h1 {
   color: var(--white-2);
+  font-family: var(--ff-space-grotesk);
   letter-spacing: -0.02em;
 }
 
@@ -292,13 +294,26 @@
 }
 
 .showcase-page .showcase-single-thumb {
-  margin: 8px 0 4px;
+  max-width: 100%;
+  height: auto;
+  max-height: 480px;
+  display: block;
+  margin: 18px auto;
+  object-fit: contain;
   border-radius: 14px;
-  max-height: 420px;
 }
 
 .showcase-page .showcase-single-content {
   margin-top: 20px;
+}
+
+.showcase-page .showcase-single-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 1.8rem auto;
+  display: block;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .showcase-page .showcase-single-content h2,

@@ -39,7 +39,11 @@
       {{ else }}
       <section class="blog-posts">
         <ul class="blog-posts-list">
-          {{ range .Pages.ByDate.Reverse }}
+          {{ $pages := .Pages }}
+          {{ if eq .Section "posts" }}
+            {{ $pages = where .Pages "Params.categories" "intersect" (slice "Activities") | complement .Pages }}
+          {{ end }}
+          {{ range $pages.ByDate.Reverse }}
           <li class="blog-post-item blog-card">
             <a href="{{ .RelPermalink }}">
               {{ $imageScratch := newScratch }}

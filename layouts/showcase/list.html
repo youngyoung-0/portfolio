@@ -1,8 +1,9 @@
 {{ partial "header.html" . }}
 
 {{ $sourceCategories := site.Params.showcase.sourceCategories | default (slice "Activities") }}
-{{ $postPages := where site.RegularPages "Section" "posts" }}
-{{ $portfolioPages := where $postPages "Params.categories" "intersect" $sourceCategories }}
+{{ $projects := where site.RegularPages "Section" "showcase" }}
+{{ $activities := where (where site.RegularPages "Section" "posts") "Params.categories" "intersect" $sourceCategories }}
+{{ $portfolioPages := (union $projects $activities).ByDate.Reverse }}
 
 <main class="showcase-main">
   <section class="showcase-section" id="portfolio-list">

@@ -15,6 +15,8 @@
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 :root {
 
   /**
@@ -25,56 +27,57 @@
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    hsl(240, 5%, 15%) 3%, 
+    hsl(240, 5%, 10%) 97%
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    hsla(240, 5%, 12%, 0.251) 0%, 
+    hsla(240, 5%, 8%, 0) 100%
+  ), hsl(240, 5%, 10%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    hsl(217, 91%, 60%) 0%, 
+    hsla(217, 91%, 60%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+    hsla(217, 91%, 60%, 0.251) 0%, 
+    hsla(221, 83%, 53%, 0) 59.86%
+  ), hsl(240, 5%, 10%);
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
+    hsl(240, 5%, 20%) 0%, 
+    hsla(240, 5%, 20%, 0) 50%
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    hsl(217, 91%, 60%), 
+    hsl(221, 83%, 53%)
   );
 
   /* solid */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
+  --jet: hsl(240, 5%, 16%);
+  --onyx: hsl(240, 5%, 13%);
+  --eerie-black-1: hsl(240, 6%, 8%);
+  --eerie-black-2: hsl(240, 5%, 10%);
+  --smoky-black: hsl(240, 10%, 4%);
   --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --white-2: hsl(240, 5%, 96%);
+  --orange-yellow-crayola: hsl(217, 91%, 60%);
+  --vegas-gold: hsl(221, 83%, 53%);
+  --light-gray: hsl(240, 5%, 80%);
+  --light-gray-70: hsla(240, 5%, 80%, 0.7);
+  --bittersweet-shimmer: hsl(0, 84%, 60%);
 
   /**
    * typography
    */
 
   /* font-family */
-  --ff-poppins: 'Poppins', sans-serif;
+  --ff-poppins: 'Archivo', sans-serif;
+  --ff-space-grotesk: 'Space Grotesk', sans-serif;
 
   /* font-size */
   --fs-1: 24px;
@@ -225,6 +228,7 @@ article.active {
 .h4,
 .h5 {
   color: var(--white-2);
+  font-family: var(--ff-space-grotesk);
   text-transform: capitalize;
 }
 
@@ -338,6 +342,7 @@ main {
 
 .info-content .name {
   color: var(--white-2);
+  font-family: var(--ff-space-grotesk);
   font-size: var(--fs-3);
   font-weight: var(--fw-500);
   letter-spacing: -0.25px;
@@ -1883,6 +1888,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* --- Markdown Post Content Typography --- */
 .post-content h1, .post-content h2, .post-content h3, .post-content h4 {
   color: var(--white-2);
+  font-family: var(--ff-space-grotesk);
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;

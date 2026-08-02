@@ -65,10 +65,13 @@
       </section>
 
       <section class="timeline">
-        {{ $posts := where site.RegularPages "Section" "posts" }}
-        {{ $allActivities := where site.RegularPages ".Params.categories" "intersect" (slice "Activities") }}
-        {{ $projects := where $allActivities ".Params.tags" "intersect" (slice "Project") }}
-        {{ $activities := $allActivities | complement $projects }}
+        {{ $projectsFromShowcase := where site.RegularPages "Section" "showcase" }}
+        {{ $postPages := where site.RegularPages "Section" "posts" }}
+        {{ $allActivities := where $postPages ".Params.categories" "intersect" (slice "Activities") }}
+        {{ $projectsFromPosts := where $allActivities ".Params.tags" "intersect" (slice "Project") }}
+        
+        {{ $projects := (union $projectsFromShowcase $projectsFromPosts).ByDate.Reverse }}
+        {{ $activities := $allActivities | complement $projectsFromPosts }}
 
         <!-- Projects Section -->
         {{ if gt (len $projects) 0 }}
@@ -172,7 +175,7 @@
         <ul class="blog-posts-list">
           {{ $scratch := newScratch }}
           {{ $scratch.Set "count" 0 }}
-          {{ range ($posts.ByDate.Reverse) }}
+          {{ range ($postPages.ByDate.Reverse) }}
             {{ if and (lt ($scratch.Get "count") 4) (not (in .Params.categories "Activities")) }}
             <li class="blog-post-item blog-card">
               <a href="{{ .RelPermalink }}">

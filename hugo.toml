@@ -16,8 +16,8 @@ title = 'Portfolio'
 
 [params.profileMode]
   enabled = true
-  title = "안녕하세요!👋 배움을 기록하는 개발자 Young입니다."
-  subtitle = "이 공간은 제가 공부하며 배운 점과 고민들, 그리고 개발 중 겪었던 트러블슈팅 경험을 기록하기 위해 만들었습니다."
+  title = "안녕하세요!👋 AI 에이전트와 페어 프로그래밍하며 배우는 개발자 Young입니다."
+  subtitle = "이 공간은 제가 공부하며 배운 점과 고민들, 그리고 AI 에이전트 커스텀 룰(.skills, .antigravity) 설정을 활용한 개발 실험들을 기록하기 위해 만들었습니다."
   email = "taeyoung6873@gmail.com"
   location = "Seoul, South Korea"
   github = "github.com/youngyoung-0"
@@ -31,7 +31,7 @@ title = 'Portfolio'
 
 [params.showcase]
   title = ""
-  subtitle = "기획 의도를 코드로 연결하고, 실험 가능한 MVP를 빠르게 만들어 학습합니다."
+  subtitle = "AI 에이전트 설계 기법을 활용해 기획 의도를 신속히 구현하고, 실험 가능한 MVP를 만들어 학습합니다."
   resumeUrl = "https://example.com/resume"
   linkedinUrl = "https://www.linkedin.com"
   githubUrl = "https://github.com/youngyoung-0"
