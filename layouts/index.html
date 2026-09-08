@@ -89,9 +89,9 @@
               {{ if .Params.disableLink }}
                 {{ .Title }}
               {{ else if .Params.externalUrl }}
-                <a href="{{ .Params.externalUrl }}" target="_blank" rel="noopener noreferrer">{{ .Title }} 🔗</a>
+                <a href="{{ .Params.externalUrl }}" target="_blank" rel="noopener noreferrer">{{ .Title }} <span class="material-symbols-outlined" style="font-size: 0.85em; margin-left: 2px; vertical-align: middle;">arrow_outward</span></a>
               {{ else }}
-                <a href="{{ .RelPermalink }}">{{ .Title }} 🔗</a>
+                <a href="{{ .RelPermalink }}">{{ .Title }} <span class="material-symbols-outlined" style="font-size: 0.85em; margin-left: 2px; vertical-align: middle;">arrow_outward</span></a>
               {{ end }}
             </h4>
             <div style="display: flex; align-items: center; gap: 8px;">
@@ -135,9 +135,9 @@
               {{ if .Params.disableLink }}
                 {{ .Title }}
               {{ else if .Params.externalUrl }}
-                <a href="{{ .Params.externalUrl }}" target="_blank" rel="noopener noreferrer">{{ .Title }} 🔗</a>
+                <a href="{{ .Params.externalUrl }}" target="_blank" rel="noopener noreferrer">{{ .Title }} <span class="material-symbols-outlined" style="font-size: 0.85em; margin-left: 2px; vertical-align: middle;">arrow_outward</span></a>
               {{ else }}
-                <a href="{{ .RelPermalink }}">{{ .Title }} 🔗</a>
+                <a href="{{ .RelPermalink }}">{{ .Title }} <span class="material-symbols-outlined" style="font-size: 0.85em; margin-left: 2px; vertical-align: middle;">arrow_outward</span></a>
               {{ end }}
             </h4>
             <div style="display: flex; align-items: center; gap: 8px;">

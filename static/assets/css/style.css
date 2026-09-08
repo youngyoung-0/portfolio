@@ -134,6 +134,34 @@ li { list-style: none; }
 
 img, ion-icon, a, button, time, span { display: block; }
 
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.15em;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  vertical-align: -0.15em;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  margin-right: 6px;
+  color: var(--orange-yellow-crayola, #3b82f6);
+}
+
+h1 .material-symbols-outlined,
+h2 .material-symbols-outlined,
+h3 .material-symbols-outlined,
+h4 .material-symbols-outlined {
+  vertical-align: -0.12em;
+}
+
 button {
   font: inherit;
   background: none;
